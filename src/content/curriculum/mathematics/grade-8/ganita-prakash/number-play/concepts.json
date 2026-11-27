@@ -1,0 +1,121 @@
+{
+  "concepts": [
+    {
+      "id": "parity",
+      "chapterId": "number-play",
+      "title": "Parity",
+      "description": "Even and odd numbers, and how parity behaves under sums, differences and games.",
+      "order": 1,
+      "unitIds": [
+        "parity-basics",
+        "sum-difference-parity",
+        "plus-minus-signs",
+        "parity-games"
+      ],
+      "prerequisites": [],
+      "textbookPages": { "start": 112, "end": 115 },
+      "learningObjectives": [
+        "Classify numbers as even or odd using pairing and the last digit",
+        "Predict the parity of sums and differences without computing them",
+        "Use parity arguments to solve sign-placement puzzles"
+      ]
+    },
+    {
+      "id": "remainders",
+      "chapterId": "number-play",
+      "title": "Remainders",
+      "description": "Division with remainders, dot arrays, k-tables and remainder puzzle strategies.",
+      "order": 2,
+      "unitIds": [
+        "division-with-remainders",
+        "same-remainder-numbers",
+        "remainder-puzzles"
+      ],
+      "prerequisites": ["parity"],
+      "textbookPages": { "start": 116, "end": 117 },
+      "learningObjectives": [
+        "Relate dividend, divisor, quotient and remainder",
+        "Describe all numbers that leave the same remainder",
+        "Solve puzzles by reading clues as remainder conditions"
+      ]
+    },
+    {
+      "id": "divisibility-rules",
+      "chapterId": "number-play",
+      "title": "Divisibility rules",
+      "description": "Quick tests to decide whether one number divides another without long division.",
+      "order": 3,
+      "unitIds": [
+        "last-digit-rules",
+        "divisibility-4-8",
+        "divisibility-6",
+        "combining-rules"
+      ],
+      "prerequisites": ["remainders"],
+      "textbookPages": { "start": 117, "end": 121 },
+      "learningObjectives": [
+        "Apply last-digit tests for 2, 5 and 10",
+        "Test divisibility by 4, 8 and 6 using place value",
+        "Combine rules to test composite divisors"
+      ]
+    },
+    {
+      "id": "shortcuts",
+      "chapterId": "number-play",
+      "title": "Shortcuts",
+      "description": "Digit sums, place-value shortcuts and the alternating-sum test for 11.",
+      "order": 4,
+      "unitIds": [
+        "place-value-rules",
+        "digit-sum-for-9",
+        "digit-sum-for-3",
+        "alternating-sum-for-11"
+      ],
+      "prerequisites": ["divisibility-rules"],
+      "textbookPages": { "start": 123, "end": 130 },
+      "learningObjectives": [
+        "Explain divisibility rules using place value",
+        "Test divisibility by 9 and 3 with digit sums",
+        "Test divisibility by 11 with alternating sums"
+      ]
+    },
+    {
+      "id": "digital-roots",
+      "chapterId": "number-play",
+      "title": "Digital roots",
+      "description": "Repeated digit sums, the digital root cycle, and puzzles solved with digital roots.",
+      "order": 5,
+      "unitIds": [
+        "computing-digital-roots",
+        "digital-roots-divisibility",
+        "digital-root-puzzles"
+      ],
+      "prerequisites": ["shortcuts"],
+      "textbookPages": { "start": 130, "end": 131 },
+      "learningObjectives": [
+        "Compute digital roots by repeated digit summation",
+        "Connect digital roots with remainders modulo 9",
+        "Use digital roots to check computations and solve puzzles"
+      ]
+    },
+    {
+      "id": "cryptarithms",
+      "chapterId": "number-play",
+      "title": "Cryptarithms",
+      "description": "Number puzzles where letters stand for digits, solved with logical reasoning.",
+      "order": 6,
+      "unitIds": [
+        "cryptarithm-basics",
+        "cryptarithm-strategies",
+        "cryptarithm-classics"
+      ],
+      "prerequisites": ["digital-roots"],
+      "textbookPages": { "start": 131, "end": 133 },
+      "learningObjectives": [
+        "Understand the rules of cryptarithm puzzles",
+        "Use column-by-column reasoning with carries",
+        "Solve classic two-digit and three-digit cryptarithms"
+      ]
+    }
+  ]
+}

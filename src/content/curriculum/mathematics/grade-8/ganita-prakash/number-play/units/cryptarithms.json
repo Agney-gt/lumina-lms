@@ -1,0 +1,272 @@
+{
+  "conceptId": "cryptarithms",
+  "units": [
+    {
+      "id": "cryptarithm-basics",
+      "conceptId": "cryptarithms",
+      "title": "What are cryptarithms?",
+      "description": "Meet number puzzles where letters stand in for digits.",
+      "order": 1,
+      "estimatedDurationMinutes": 10,
+      "learningObjectives": [
+        "State the rules of cryptarithm puzzles",
+        "Set up a cryptarithm as column addition"
+      ],
+      "lessonId": "lesson-cryptarithm-basics",
+      "activityIds": ["mcq-cryptarithm-basics"],
+      "pageReferences": [{ "start": 131, "end": 132 }],
+      "prerequisites": [],
+      "lesson": {
+        "id": "lesson-cryptarithm-basics",
+        "unitId": "cryptarithm-basics",
+        "title": "What are cryptarithms?",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-cb-1",
+            "title": "Letters hiding digits",
+            "blocks": [
+              {
+                "id": "cb-p1",
+                "type": "paragraph",
+                "text": "A **cryptarithm** is a calculation where each digit has been replaced by a letter. Your job is to work out which digit each letter stands for."
+              },
+              {
+                "id": "cb-d1",
+                "type": "diagram",
+                "label": "A cryptarithm",
+                "description": "  A B\n+ B A\n-----\n  8 8 — each letter hides one digit; identical letters mean identical digits."
+              },
+              {
+                "id": "cb-l1",
+                "type": "list",
+                "ordered": true,
+                "items": [
+                  "Each letter stands for exactly one digit, and different letters stand for different digits",
+                  "The first letter of a number cannot be 0",
+                  "The restored arithmetic must be correct, column by column"
+                ]
+              },
+              {
+                "id": "cb-k1",
+                "type": "key_idea",
+                "text": "Cryptarithms are solved with ordinary column arithmetic plus logical deduction — no guessing races needed."
+              }
+            ]
+          },
+          {
+            "id": "sec-cb-2",
+            "title": "Reading columns",
+            "blocks": [
+              {
+                "id": "cb-p2",
+                "type": "paragraph",
+                "text": "Read the puzzle column by column, units first. Each column produces a small equation that includes any **carry** flowing in from the right and any carry flowing out to the left."
+              },
+              {
+                "id": "cb-q1",
+                "type": "quick_check",
+                "questionId": "qc-cb-1",
+                "question": "In a cryptarithm, why can the letter A (as the first digit of AB) never be 0?",
+                "options": [
+                  { "id": "a", "text": "Because 0 has no pairs" },
+                  { "id": "b", "text": "Because then AB would really be a one-digit number B" },
+                  { "id": "c", "text": "Because 0 must always stand for the letter O" },
+                  { "id": "d", "text": "Because carries would become negative" }
+                ],
+                "correctOptionId": "b",
+                "explanation": "Leading zeros are not written in standard numbers, so a leading letter must stand for a digit from 1 to 9."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cryptarithm-strategies",
+      "conceptId": "cryptarithms",
+      "title": "Strategies: columns, carries and parity",
+      "description": "A toolkit of deductions: carry limits, column equations and parity checks.",
+      "order": 2,
+      "estimatedDurationMinutes": 12,
+      "learningObjectives": [
+        "Bound the carry entering and leaving each column",
+        "Use column equations and parity to deduce digits"
+      ],
+      "lessonId": "lesson-cryptarithm-strategies",
+      "activityIds": ["mcq-cryptarithm-strategies"],
+      "pageReferences": [{ "start": 132, "end": 132 }],
+      "prerequisites": ["cryptarithm-basics"],
+      "lesson": {
+        "id": "lesson-cryptarithm-strategies",
+        "unitId": "cryptarithm-strategies",
+        "title": "Strategies: columns, carries and parity",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-cs-1",
+            "title": "Carries are small",
+            "blocks": [
+              {
+                "id": "cs-p1",
+                "type": "paragraph",
+                "text": "When two digits are added, the column sum is at most 9 + 9 + 1(carry) = 19, so the carry leaving any column is at most 1. Knowing this immediately bounds every column equation."
+              },
+              {
+                "id": "cs-m1",
+                "type": "math",
+                "value": "\\text{column: } a + b + c_{\\text{in}} = c_{\\text{out}} \\times 10 + r, \\qquad c_{\\text{out}} \\in \\{0, 1\\}"
+              }
+            ]
+          },
+          {
+            "id": "sec-cs-2",
+            "title": "Parity shortcuts",
+            "blocks": [
+              {
+                "id": "cs-w1",
+                "type": "worked_example",
+                "title": "Worked example: parity in A B + B A = D D",
+                "content": [
+                  {
+                    "id": "cs-w1p1",
+                    "type": "paragraph",
+                    "text": "Expanding, AB + BA = 11 × (A + B). If the result is DD = 11 × D, then A + B = D. So the units digit D equals the sum of the two digits, and the tens column must work out with carry 1."
+                  },
+                  {
+                    "id": "cs-w1m1",
+                    "type": "math",
+                    "value": "AB + BA = 10A + B + 10B + A = 11(A + B)"
+                  },
+                  {
+                    "id": "cs-w1p2",
+                    "type": "paragraph",
+                    "text": "Parity speeds things up: if the sum DD has both digits even, then 11 × (A + B) being a repdigit of even digits forces A + B even, which happens exactly when A and B have the **same parity**."
+                  }
+                ]
+              },
+              {
+                "id": "cs-k1",
+                "type": "key_idea",
+                "text": "Write each column as an equation with its carry, then use bounds, parity and 'different letters, different digits' to eliminate cases."
+              },
+              {
+                "id": "cs-q1",
+                "type": "quick_check",
+                "questionId": "qc-cs-1",
+                "question": "In AB + B = AAC, what can you say about the carry out of the units column?",
+                "options": [
+                  { "id": "a", "text": "It must be 0, because the units result is C" },
+                  { "id": "b", "text": "It must be 1, because A appears in the tens place of the answer while only B was added below" },
+                  { "id": "c", "text": "It can be 0 or 1 depending on A" },
+                  { "id": "d", "text": "Carries do not exist in cryptarithms" }
+                ],
+                "correctOptionId": "b",
+                "explanation": "The tens column receives B + (carry) + 0 and produces A, and the hundreds digit A also appears — with two addends the only source of a new leading digit is a carry of 1 into the hundreds."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cryptarithm-classics",
+      "conceptId": "cryptarithms",
+      "title": "Classic cryptarithms",
+      "description": "Solve complete puzzles end to end, column by column.",
+      "order": 3,
+      "estimatedDurationMinutes": 12,
+      "learningObjectives": [
+        "Solve two-digit cryptarithms completely",
+        "Verify solutions column by column"
+      ],
+      "lessonId": "lesson-cryptarithm-classics",
+      "activityIds": ["mcq-cryptarithm-classics"],
+      "pageReferences": [{ "start": 132, "end": 133 }],
+      "prerequisites": ["cryptarithm-strategies"],
+      "lesson": {
+        "id": "lesson-cryptarithm-classics",
+        "unitId": "cryptarithm-classics",
+        "title": "Classic cryptarithms",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-cc-1",
+            "title": "Solving A B + B A = 8 8",
+            "blocks": [
+              {
+                "id": "cc-w1",
+                "type": "worked_example",
+                "title": "Worked example",
+                "content": [
+                  {
+                    "id": "cc-w1p1",
+                    "type": "paragraph",
+                    "text": "Units column: B + A ends in 8, so A + B is 8 or 18. Tens column: A + B (the same sum!) plus carry equals 88."
+                  },
+                  {
+                    "id": "cc-w1m1",
+                    "type": "math",
+                    "value": "AB + BA = 11(A + B) = 88 \\implies A + B = 8"
+                  },
+                  {
+                    "id": "cc-w1p2",
+                    "type": "paragraph",
+                    "text": "So any pair of different digits A ≠ B with A ≥ 1 and A + B = 8 solves it: A,B ∈ {1,7}, {2,6}, {3,5}, {5,3}, {6,2}, {7,1} — and {4,4} is banned since equal letters cannot differ. Six solutions, all sharing A + B = 8."
+                  }
+                ]
+              },
+              {
+                "id": "cc-p1",
+                "type": "paragraph",
+                "text": "The lesson: cryptarithms can have several solutions, and part of the art is describing **all** of them rather than stopping at the first."
+              }
+            ]
+          },
+          {
+            "id": "sec-cc-2",
+            "title": "A three-digit finish",
+            "blocks": [
+              {
+                "id": "cc-w2",
+                "type": "worked_example",
+                "title": "Worked example: A A + A = B B B",
+                "content": [
+                  {
+                    "id": "cc-w2p1",
+                    "type": "paragraph",
+                    "text": "AA + A = 11A + A = 12A. We need 12A = 111 × B = BBB with B a digit."
+                  },
+                  {
+                    "id": "cc-w2m1",
+                    "type": "math",
+                    "value": "BBB = 111 \\times B, \\qquad 12A = 111B"
+                  },
+                  {
+                    "id": "cc-w2p2",
+                    "type": "paragraph",
+                    "text": "Try B = 2, 3, …: B = 2 gives 12A = 222, so A = 18.5 ✗. B = 4? 444/12 = 37 ✗. No digit A works for any B — checking all B from 1 to 9 shows no solution exists. Some cryptarithms are impossible, and proving impossibility is a valid answer!"
+                  }
+                ]
+              },
+              {
+                "id": "cc-q1",
+                "type": "quick_check",
+                "questionId": "qc-cc-1",
+                "question": "For AB + BA = 88, which of the following is a valid assignment?",
+                "options": [
+                  { "id": "a", "text": "A = 4, B = 4" },
+                  { "id": "b", "text": "A = 1, B = 7" },
+                  { "id": "c", "text": "A = 8, B = 0" },
+                  { "id": "d", "text": "A = 9, B = 1" }
+                ],
+                "correctOptionId": "b",
+                "explanation": "A + B must equal 8 with A ≠ B and A ≥ 1. A = 1, B = 7 gives 17 + 71 = 88 ✓. A = B = 4 breaks the distinct-digits rule; the other pairs sum to 8 but give 80 + 08 = 88 with a leading zero, or 91 + 19 = 110."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

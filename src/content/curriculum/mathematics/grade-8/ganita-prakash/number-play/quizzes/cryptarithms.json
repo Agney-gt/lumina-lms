@@ -1,0 +1,187 @@
+{
+  "quizzes": [
+    {
+      "id": "mcq-cryptarithm-basics",
+      "unitId": "cryptarithm-basics",
+      "conceptId": "cryptarithms",
+      "type": "mcq",
+      "title": "MCQ: What are cryptarithms?",
+      "instructions": "Recall the rules of cryptarithm puzzles.",
+      "questions": [
+        {
+          "id": "q-cb-1",
+          "type": "mcq",
+          "prompt": "In a cryptarithm, two different letters must stand for:",
+          "options": [
+            { "id": "a", "text": "The same digit" },
+            { "id": "b", "text": "Different digits" },
+            { "id": "c", "text": "Digits that differ by 1" },
+            { "id": "d", "text": "Any digits — no restriction" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Different letters must stand for different digits; the same letter always means the same digit.",
+          "difficulty": 1,
+          "marks": 1
+        },
+        {
+          "id": "q-cb-2",
+          "type": "mcq",
+          "prompt": "Which digit can never be the first digit of a multi-digit number in a cryptarithm?",
+          "options": [
+            { "id": "a", "text": "1" },
+            { "id": "b", "text": "9" },
+            { "id": "c", "text": "0" },
+            { "id": "d", "text": "5" }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Leading zeros are not written in standard numbers, so the leading letter must be 1–9.",
+          "difficulty": 1,
+          "marks": 1
+        },
+        {
+          "id": "q-cb-3",
+          "type": "mcq",
+          "prompt": "Which column of a cryptarithm should be analysed first?",
+          "options": [
+            { "id": "a", "text": "The hundreds column" },
+            { "id": "b", "text": "The tens column" },
+            { "id": "c", "text": "The units column" },
+            { "id": "d", "text": "Any column — order makes no difference" }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Column addition starts at the units, and its carry feeds the next column — so work right to left.",
+          "difficulty": 2,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    },
+    {
+      "id": "mcq-cryptarithm-strategies",
+      "unitId": "cryptarithm-strategies",
+      "conceptId": "cryptarithms",
+      "type": "mcq",
+      "title": "MCQ: Cryptarithm strategies",
+      "instructions": "Use column equations, carry bounds and parity.",
+      "questions": [
+        {
+          "id": "q-cs-1",
+          "type": "mcq",
+          "prompt": "In a two-addend column, what is the largest possible carry out?",
+          "options": [
+            { "id": "a", "text": "0" },
+            { "id": "b", "text": "1" },
+            { "id": "c", "text": "2" },
+            { "id": "d", "text": "9" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "9 + 9 + 1 = 19 at most, so the carry out is at most 1.",
+          "difficulty": 1,
+          "marks": 1
+        },
+        {
+          "id": "q-cs-2",
+          "type": "mcq",
+          "prompt": "AB + BA equals which expression?",
+          "options": [
+            { "id": "a", "text": "A + B" },
+            { "id": "b", "text": "10(A + B)" },
+            { "id": "c", "text": "11(A + B)" },
+            { "id": "d", "text": "9(A + B)" }
+          ],
+          "correctOptionId": "c",
+          "explanation": "10A + B + 10B + A = 11A + 11B = 11(A + B) — always a multiple of 11.",
+          "difficulty": 2,
+          "marks": 1
+        },
+        {
+          "id": "q-cs-3",
+          "type": "mcq",
+          "prompt": "If AB + BA = DD with D even, what can parity tell us about A and B?",
+          "options": [
+            { "id": "a", "text": "They must both be even" },
+            { "id": "b", "text": "They must have the same parity (both even or both odd)" },
+            { "id": "c", "text": "They must have different parities" },
+            { "id": "d", "text": "Parity gives no information" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "DD even forces 11(A + B) even, so A + B must be even — which happens exactly when A and B share their parity.",
+          "difficulty": 3,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    },
+    {
+      "id": "mcq-cryptarithm-classics",
+      "unitId": "cryptarithm-classics",
+      "conceptId": "cryptarithms",
+      "type": "mcq",
+      "title": "MCQ: Classic cryptarithms",
+      "instructions": "Solve column by column, then verify.",
+      "questions": [
+        {
+          "id": "q-cc-1",
+          "type": "mcq",
+          "prompt": "For AB + BA = 66, which digit pairs (A, B) work?",
+          "options": [
+            { "id": "a", "text": "Any pair with A + B = 6, A ≠ B, A ≥ 1" },
+            { "id": "b", "text": "Only A = 6, B = 0" },
+            { "id": "c", "text": "Only A = 3, B = 3" },
+            { "id": "d", "text": "No pair works" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "11(A + B) = 66 gives A + B = 6; pairs like (1,5), (2,4), (4,2), (5,1) all work — (3,3) is banned and (6,0) makes B? A = 6, B = 0 gives 60 + 06 — the leading zero of 06 is not allowed.",
+          "difficulty": 2,
+          "marks": 1
+        },
+        {
+          "id": "q-cc-2",
+          "type": "mcq",
+          "prompt": "What is 25 + 52 in the AB + BA pattern?",
+          "options": [
+            { "id": "a", "text": "77" },
+            { "id": "b", "text": "87" },
+            { "id": "c", "text": "770" },
+            { "id": "d", "text": "75" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "25 + 52 = 77 = 11 × 7, matching the formula 11(A + B) = 11 × 7.",
+          "difficulty": 1,
+          "marks": 1
+        },
+        {
+          "id": "q-cc-3",
+          "type": "mcq",
+          "prompt": "A cryptarithm is examined and no assignment of digits works. The correct conclusion is:",
+          "options": [
+            { "id": "a", "text": "You must have made an arithmetic error — a solution always exists" },
+            { "id": "b", "text": "The puzzle is impossible, and a reasoned proof of that is a valid answer" },
+            { "id": "c", "text": "Letters may share digits after all" },
+            { "id": "d", "text": "Carries should be ignored" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Some cryptarithms are deliberately impossible; demonstrating that with complete reasoning counts as solving the puzzle.",
+          "difficulty": 2,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    }
+  ]
+}

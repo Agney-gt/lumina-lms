@@ -1,0 +1,11 @@
+{
+  "id": "science-grade-8",
+  "name": "Science",
+  "grade": 8,
+  "description": "Explore physics, chemistry and biology through experiments and activities with NCERT's Curiosity.",
+  "publisher": "NCERT",
+  "bookId": "curiosity",
+  "book": "Curiosity",
+  "parts": ["Part 1", "Part 2"],
+  "order": 2
+}

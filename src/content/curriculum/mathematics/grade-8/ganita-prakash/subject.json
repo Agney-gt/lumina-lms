@@ -1,0 +1,11 @@
+{
+  "id": "maths-grade-8",
+  "name": "Mathematics",
+  "grade": 8,
+  "description": "Build strong number sense, algebra and geometry skills with NCERT's Ganita Prakash.",
+  "publisher": "NCERT",
+  "bookId": "ganita-prakash",
+  "book": "Ganita Prakash",
+  "parts": ["Part 1", "Part 2"],
+  "order": 1
+}

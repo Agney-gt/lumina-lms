@@ -1,0 +1,280 @@
+{
+  "quizzes": [
+    {
+      "id": "mcq-parity-basics",
+      "unitId": "parity-basics",
+      "conceptId": "parity",
+      "type": "mcq",
+      "title": "MCQ: Even and odd numbers",
+      "instructions": "Choose one answer for each question. You can rate how confident you feel about each answer.",
+      "questions": [
+        {
+          "id": "q-pb-1",
+          "type": "mcq",
+          "prompt": "Which of these numbers is odd?",
+          "options": [
+            { "id": "a", "text": "456" },
+            { "id": "b", "text": "2,341" },
+            { "id": "c", "text": "8,790" },
+            { "id": "d", "text": "1,024" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "2,341 ends in 1, an odd digit, so it is odd. The others end in 6, 0 and 4 — all even.",
+          "difficulty": 1,
+          "marks": 1
+        },
+        {
+          "id": "q-pb-2",
+          "type": "mcq",
+          "prompt": "A number can be written as 2 × n + 1. What is its parity?",
+          "options": [
+            { "id": "a", "text": "Even" },
+            { "id": "b", "text": "Odd" },
+            { "id": "c", "text": "Depends on n" },
+            { "id": "d", "text": "It cannot be decided" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "2 × n pairs everything up; the + 1 is the unpaired leftover, which is the definition of odd.",
+          "difficulty": 1,
+          "marks": 1
+        },
+        {
+          "id": "q-pb-3",
+          "type": "mcq",
+          "prompt": "The last digit of a large number is 0. Which statement must be true?",
+          "options": [
+            { "id": "a", "text": "The number is even, and divisible by 5 and 10" },
+            { "id": "b", "text": "The number is even but not divisible by 5" },
+            { "id": "c", "text": "The number is odd" },
+            { "id": "d", "text": "The number is divisible by 10 only" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Ending in 0 makes the number divisible by 2, 5 and 10 at once.",
+          "difficulty": 2,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    },
+    {
+      "id": "mcq-sum-difference-parity",
+      "unitId": "sum-difference-parity",
+      "conceptId": "parity",
+      "type": "mcq",
+      "title": "MCQ: Parity of sums and differences",
+      "instructions": "Predict the parity without computing, where possible.",
+      "questions": [
+        {
+          "id": "q-sdp-1",
+          "type": "mcq",
+          "prompt": "Is 483 + 1,276 even or odd?",
+          "options": [
+            { "id": "a", "text": "Even — odd + even is even" },
+            { "id": "b", "text": "Odd — odd + even is odd" },
+            { "id": "c", "text": "Even — both numbers are even" },
+            { "id": "d", "text": "It cannot be decided without adding" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "483 is odd and 1,276 is even; odd + even is odd.",
+          "difficulty": 1,
+          "marks": 1
+        },
+        {
+          "id": "q-sdp-2",
+          "type": "mcq",
+          "prompt": "What is the parity of 45 − 23?",
+          "options": [
+            { "id": "a", "text": "Even — odd − odd is even" },
+            { "id": "b", "text": "Odd — odd − odd is odd" },
+            { "id": "c", "text": "Odd — 45 and 23 have different parities" },
+            { "id": "d", "text": "Odd — all subtractions of odds are odd" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "odd − odd is even: the two leftovers pair with each other, 45 − 23 = 22.",
+          "difficulty": 2,
+          "marks": 1
+        },
+        {
+          "id": "q-sdp-3",
+          "type": "mcq",
+          "prompt": "How many odd numbers must a sum contain for the total to be odd?",
+          "options": [
+            { "id": "a", "text": "An even number of them" },
+            { "id": "b", "text": "An odd number of them" },
+            { "id": "c", "text": "Exactly one" },
+            { "id": "d", "text": "At least three" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Odd numbers pair off two at a time into even sums, so an odd count of odd terms leaves one unpaired unit — an odd total.",
+          "difficulty": 3,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    },
+    {
+      "id": "mcq-plus-minus-signs",
+      "unitId": "plus-minus-signs",
+      "conceptId": "parity",
+      "type": "mcq",
+      "title": "MCQ: Plus-minus signs",
+      "instructions": "Use parity arguments rather than brute force.",
+      "questions": [
+        {
+          "id": "q-pms-1",
+          "type": "mcq",
+          "prompt": "Changing a + k term into − k changes the total by how much?",
+          "options": [
+            { "id": "a", "text": "k" },
+            { "id": "b", "text": "2k" },
+            { "id": "c", "text": "k²" },
+            { "id": "d", "text": "It depends on k" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The total loses + k and gains − k, a shift of 2k — always even.",
+          "difficulty": 2,
+          "marks": 1
+        },
+        {
+          "id": "q-pms-2",
+          "type": "mcq",
+          "prompt": "In the puzzle 1 □ 2 □ … □ 9, every arrangement gives an answer that is:",
+          "options": [
+            { "id": "a", "text": "Even" },
+            { "id": "b", "text": "Odd" },
+            { "id": "c", "text": "Sometimes even, sometimes odd" },
+            { "id": "d", "text": "Always equal to 45" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The all-plus total 45 is odd, and each sign flip subtracts an even number — parity never changes.",
+          "difficulty": 2,
+          "marks": 1
+        },
+        {
+          "id": "q-pms-3",
+          "type": "mcq",
+          "prompt": "For 1 □ 2 □ … □ 10 (all-plus total 55), which result is possible?",
+          "options": [
+            { "id": "a", "text": "10" },
+            { "id": "b", "text": "16" },
+            { "id": "c", "text": "17" },
+            { "id": "d", "text": "None of these" }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Every result must be odd (55 − 2k), so only 17 is possible: flipping 1, 2, 3, 4, 6, 7? For example 1−2+3−4+5−6+7+8+9+10 = 31? In general any odd value 55 − 2k between −45 and 55 can occur, and 17 = 55 − 2×19 qualifies with the right flips.",
+          "difficulty": 4,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    },
+    {
+      "id": "descriptive-plus-minus-signs",
+      "unitId": "plus-minus-signs",
+      "conceptId": "parity",
+      "type": "descriptive",
+      "title": "Descriptive: Explain the plus-minus puzzle",
+      "instructions": "Explain in your own words why every arrangement of + and − signs between 1 and 9 gives an odd answer. Include an example arrangement and, if you can, a general argument.",
+      "questions": [
+        {
+          "id": "q-dpms-1",
+          "type": "descriptive",
+          "prompt": "Why can no arrangement of + and − signs in 1 □ 2 □ 3 □ … □ 9 produce an even answer? Support your explanation with an example and a general argument.",
+          "marks": 5,
+          "rubricId": "rubric-descriptive-maths",
+          "keyTerms": [
+            "sum of 1 to 9",
+            "45",
+            "even",
+            "odd",
+            "2k",
+            "twice"
+          ],
+          "modelAnswer": "The sum of all numbers 1 to 9 is 45, which is odd. Changing any + sign to a − sign subtracts twice that number, 2k, which is even. Since subtracting even numbers never changes parity, every arrangement gives an odd total. Example: 1 − 2 + 3 − 4 + 5 − 6 + 7 − 8 + 9 = 5, still odd."
+        }
+      ],
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      },
+      "rubricId": "rubric-descriptive-maths"
+    },
+    {
+      "id": "mcq-parity-games",
+      "unitId": "parity-games",
+      "conceptId": "parity",
+      "type": "mcq",
+      "title": "MCQ: Parity in games and puzzles",
+      "instructions": "Think about products and running totals.",
+      "questions": [
+        {
+          "id": "q-pg-1",
+          "type": "mcq",
+          "prompt": "Which product is odd?",
+          "options": [
+            { "id": "a", "text": "12 × 13" },
+            { "id": "b", "text": "11 × 15" },
+            { "id": "c", "text": "14 × 17" },
+            { "id": "d", "text": "10 × 21" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "11 × 15 is odd × odd = odd. Every other product includes an even factor.",
+          "difficulty": 1,
+          "marks": 1
+        },
+        {
+          "id": "q-pg-2",
+          "type": "mcq",
+          "prompt": "Is 1 × 3 × 5 × … × 19 (all odd numbers up to 19) even or odd?",
+          "options": [
+            { "id": "a", "text": "Even — there are many factors" },
+            { "id": "b", "text": "Odd — all factors are odd" },
+            { "id": "c", "text": "Even — ten factors make an even product" },
+            { "id": "d", "text": "It depends on the multiplication order" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A product is odd only when every factor is odd. Order never matters.",
+          "difficulty": 2,
+          "marks": 1
+        },
+        {
+          "id": "q-pg-3",
+          "type": "mcq",
+          "prompt": "In the running-total game, the current total is odd. Which move keeps it odd?",
+          "options": [
+            { "id": "a", "text": "Choosing an even number" },
+            { "id": "b", "text": "Choosing an odd number" },
+            { "id": "c", "text": "Choosing 1" },
+            { "id": "d", "text": "No move can keep it odd" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "odd + even stays odd; odd + odd flips to even.",
+          "difficulty": 2,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    }
+  ]
+}

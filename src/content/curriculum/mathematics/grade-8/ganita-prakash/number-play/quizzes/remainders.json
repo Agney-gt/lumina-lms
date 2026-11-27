@@ -1,0 +1,212 @@
+{
+  "quizzes": [
+    {
+      "id": "mcq-division-with-remainders",
+      "unitId": "division-with-remainders",
+      "conceptId": "remainders",
+      "type": "mcq",
+      "title": "MCQ: Division with remainders",
+      "instructions": "Remember: the remainder is always smaller than the divisor.",
+      "questions": [
+        {
+          "id": "q-dwr-1",
+          "type": "mcq",
+          "prompt": "Which equation correctly represents 23 ÷ 4?",
+          "options": [
+            { "id": "a", "text": "23 = 4 × 5 + 3" },
+            { "id": "b", "text": "23 = 4 × 6 + 1" },
+            { "id": "c", "text": "23 = 4 × 5 + 2" },
+            { "id": "d", "text": "23 = 4 × 4 + 7" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "4 × 5 = 20 fits inside 23 leaving remainder 3; in option b the quotient 6 overshoots (4 × 6 = 24 > 23), and option d has an impossible remainder 7 > 4.",
+          "difficulty": 1,
+          "marks": 1
+        },
+        {
+          "id": "q-dwr-2",
+          "type": "mcq",
+          "prompt": "When dividing by 7, which remainder is impossible?",
+          "options": [
+            { "id": "a", "text": "0" },
+            { "id": "b", "text": "5" },
+            { "id": "c", "text": "7" },
+            { "id": "d", "text": "6" }
+          ],
+          "correctOptionId": "c",
+          "explanation": "A remainder must be smaller than the divisor; 7 would mean one more group of 7 fits.",
+          "difficulty": 1,
+          "marks": 1
+        },
+        {
+          "id": "q-dwr-3",
+          "type": "mcq",
+          "prompt": "In the k-table for divisor 6, the largest k whose multiple fits inside 50 is 8. What is the remainder of 50 ÷ 6?",
+          "options": [
+            { "id": "a", "text": "8" },
+            { "id": "b", "text": "2" },
+            { "id": "c", "text": "48" },
+            { "id": "d", "text": "1" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "50 − 6 × 8 = 50 − 48 = 2, and 2 < 6 ✓.",
+          "difficulty": 2,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    },
+    {
+      "id": "mcq-same-remainder-numbers",
+      "unitId": "same-remainder-numbers",
+      "conceptId": "remainders",
+      "type": "mcq",
+      "title": "MCQ: Numbers with the same remainder",
+      "instructions": "Use the family formula d × k + r.",
+      "questions": [
+        {
+          "id": "q-srn-1",
+          "type": "mcq",
+          "prompt": "Numbers leaving remainder 3 when divided by 5 have which form?",
+          "options": [
+            { "id": "a", "text": "5k + 3" },
+            { "id": "b", "text": "3k + 5" },
+            { "id": "c", "text": "5k − 3" },
+            { "id": "d", "text": "15k + 3" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Family members are d × k + r = 5k + 3: 3, 8, 13, 18, …",
+          "difficulty": 1,
+          "marks": 1
+        },
+        {
+          "id": "q-srn-2",
+          "type": "mcq",
+          "prompt": "Two numbers both leave remainder 2 when divided by 6. What is the difference between them?",
+          "options": [
+            { "id": "a", "text": "A multiple of 2" },
+            { "id": "b", "text": "A multiple of 6" },
+            { "id": "c", "text": "Exactly 6" },
+            { "id": "d", "text": "A multiple of 12" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Family members step by the divisor: (6a + 2) − (6b + 2) = 6(a − b), a multiple of 6.",
+          "difficulty": 2,
+          "marks": 1
+        },
+        {
+          "id": "q-srn-3",
+          "type": "mcq",
+          "prompt": "Is 100 in the family of numbers leaving remainder 4 when divided by 8?",
+          "options": [
+            { "id": "a", "text": "Yes — 100 = 8 × 12 + 4" },
+            { "id": "b", "text": "No — 100 leaves remainder 2" },
+            { "id": "c", "text": "No — 100 leaves remainder 6" },
+            { "id": "d", "text": "Yes — all even numbers leave remainder 4" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "8 × 12 = 96, and 100 − 96 = 4 ✓ — 100 belongs to the family 8k + 4.",
+          "difficulty": 2,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    },
+    {
+      "id": "descriptive-same-remainder-numbers",
+      "unitId": "same-remainder-numbers",
+      "conceptId": "remainders",
+      "type": "descriptive",
+      "title": "Descriptive: Describe a remainder family",
+      "instructions": "Write a clear explanation with an example. You may use letters like d, k and r for a general argument.",
+      "questions": [
+        {
+          "id": "q-dsrn-1",
+          "type": "descriptive",
+          "prompt": "Describe all numbers that leave remainder 2 when divided by 5. Give the general form, list the first few, and explain how far apart consecutive members are.",
+          "marks": 5,
+          "rubricId": "rubric-descriptive-maths",
+          "keyTerms": ["5k + 2", "remainder", "multiple of 5", "5", "differ"],
+          "modelAnswer": "Numbers leaving remainder 2 when divided by 5 are exactly the numbers of the form 5k + 2 for k = 0, 1, 2, 3, …: that is 2, 7, 12, 17, 22, …. Subtracting the remainder 2 leaves a multiple of 5, and consecutive members differ by exactly 5."
+        }
+      ],
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      },
+      "rubricId": "rubric-descriptive-maths"
+    },
+    {
+      "id": "mcq-remainder-puzzles",
+      "unitId": "remainder-puzzles",
+      "conceptId": "remainders",
+      "type": "mcq",
+      "title": "MCQ: Remainder puzzles",
+      "instructions": "Translate each clue into a family, then intersect.",
+      "questions": [
+        {
+          "id": "q-rp-1",
+          "type": "mcq",
+          "prompt": "A number leaves remainder 1 when divided by both 2 and 3. What is the smallest such number above 1?",
+          "options": [
+            { "id": "a", "text": "3" },
+            { "id": "b", "text": "5" },
+            { "id": "c", "text": "7" },
+            { "id": "d", "text": "9" }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Odd numbers: 1, 3, 5, 7, … Numbers of the form 3k + 1: 1, 4, 7, 10, … The smallest common member above 1 is 7.",
+          "difficulty": 2,
+          "marks": 1
+        },
+        {
+          "id": "q-rp-2",
+          "type": "mcq",
+          "prompt": "A mystery number is of the form 4k + 1 and is less than 20 but greater than 10. Which could it be?",
+          "options": [
+            { "id": "a", "text": "11" },
+            { "id": "b", "text": "13" },
+            { "id": "c", "text": "15" },
+            { "id": "d", "text": "17" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The family is 1, 5, 9, 13, 17, 21, … Between 10 and 20 the members are 13 and 17 — and 13 is listed.",
+          "difficulty": 2,
+          "marks": 1
+        },
+        {
+          "id": "q-rp-3",
+          "type": "mcq",
+          "prompt": "A number leaves remainder 0 when divided by 4 and remainder 1 when divided by 3. Which number below 25 satisfies both?",
+          "options": [
+            { "id": "a", "text": "8" },
+            { "id": "b", "text": "12" },
+            { "id": "c", "text": "16" },
+            { "id": "d", "text": "21" }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Multiples of 4 under 25: 4, 8, 12, 16, 20, 24. Which leaves remainder 1 mod 3? 16 = 3 × 5 + 1 ✓. (12 and 24 leave remainder 0; 8 leaves 2.)",
+          "difficulty": 3,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    }
+  ]
+}

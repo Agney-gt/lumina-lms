@@ -1,0 +1,19 @@
+{
+  "id": "number-play",
+  "subjectId": "maths-grade-8",
+  "title": "Number Play",
+  "chapterNumber": 5,
+  "description": "Explore parity, remainders, divisibility rules, shortcuts, digital roots and cryptarithms through games and puzzles.",
+  "order": 5,
+  "pdfId": "number-play-pdf",
+  "pageRange": { "start": 108, "end": 134 },
+  "prerequisites": [],
+  "conceptIds": [
+    "parity",
+    "remainders",
+    "divisibility-rules",
+    "shortcuts",
+    "digital-roots",
+    "cryptarithms"
+  ]
+}

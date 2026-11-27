@@ -1,0 +1,378 @@
+{
+  "conceptId": "divisibility-rules",
+  "units": [
+    {
+      "id": "last-digit-rules",
+      "conceptId": "divisibility-rules",
+      "title": "Last-digit rules: 2, 5 and 10",
+      "description": "Decide divisibility by 2, 5 and 10 from the last digit alone.",
+      "order": 1,
+      "estimatedDurationMinutes": 8,
+      "learningObjectives": [
+        "State the last-digit tests for 2, 5 and 10",
+        "Explain why the last digit is enough"
+      ],
+      "lessonId": "lesson-last-digit-rules",
+      "activityIds": ["mcq-last-digit-rules"],
+      "pageReferences": [{ "start": 117, "end": 118 }],
+      "prerequisites": [],
+      "lesson": {
+        "id": "lesson-last-digit-rules",
+        "unitId": "last-digit-rules",
+        "title": "Last-digit rules: 2, 5 and 10",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-ldr-1",
+            "title": "Three quick tests",
+            "blocks": [
+              {
+                "id": "ldr-t1",
+                "type": "table",
+                "headers": ["Divisor", "Rule", "Example"],
+                "rows": [
+                  ["2", "Last digit is 0, 2, 4, 6 or 8", "3,458 ✓"],
+                  ["5", "Last digit is 0 or 5", "7,285 ✓"],
+                  ["10", "Last digit is 0", "9,140 ✓"]
+                ],
+                "caption": "Last-digit divisibility tests"
+              },
+              {
+                "id": "ldr-p1",
+                "type": "paragraph",
+                "text": "Every place except the units place is a multiple of 10, and 10 is divisible by 2, 5 and 10. So the leading part of any number always passes these tests, and only the last digit can spoil it."
+              },
+              {
+                "id": "ldr-m1",
+                "type": "math",
+                "value": "4{,}738 = 4{,}730 + 8 = 10 \\times 473 + 8"
+              },
+              {
+                "id": "ldr-k1",
+                "type": "key_idea",
+                "text": "Divisibility by 2, 5 or 10 is decided entirely by the units digit."
+              }
+            ]
+          },
+          {
+            "id": "sec-ldr-2",
+            "title": "Applying the tests",
+            "blocks": [
+              {
+                "id": "ldr-w1",
+                "type": "worked_example",
+                "title": "Worked example: sorting 341, 250 and 975",
+                "content": [
+                  {
+                    "id": "ldr-w1p1",
+                    "type": "paragraph",
+                    "text": "341 ends in 1: divisible by neither 2, 5 nor 10. 250 ends in 0: divisible by 2, 5 **and** 10. 975 ends in 5: divisible by 5 only."
+                  },
+                  {
+                    "id": "ldr-w1p2",
+                    "type": "paragraph",
+                    "text": "Notice that any number divisible by 10 is automatically divisible by both 2 and 5 — because 10 = 2 × 5."
+                  }
+                ]
+              },
+              {
+                "id": "ldr-q1",
+                "type": "quick_check",
+                "questionId": "qc-ldr-1",
+                "question": "Which single last digit makes a number divisible by 2, 5 and 10 at once?",
+                "options": [
+                  { "id": "a", "text": "5" },
+                  { "id": "b", "text": "0" },
+                  { "id": "c", "text": "2" },
+                  { "id": "d", "text": "No single digit can do this" }
+                ],
+                "correctOptionId": "b",
+                "explanation": "Only numbers ending in 0 are divisible by 10 — and they are automatically divisible by 2 and 5 as well."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "divisibility-4-8",
+      "conceptId": "divisibility-rules",
+      "title": "Divisibility by 4 and 8",
+      "description": "Use the last two or three digits to test divisibility by 4 and 8.",
+      "order": 2,
+      "estimatedDurationMinutes": 10,
+      "learningObjectives": [
+        "Test divisibility by 4 using the last two digits",
+        "Test divisibility by 8 using the last three digits"
+      ],
+      "lessonId": "lesson-divisibility-4-8",
+      "activityIds": ["mcq-divisibility-4-8"],
+      "pageReferences": [{ "start": 118, "end": 119 }],
+      "prerequisites": ["last-digit-rules"],
+      "lesson": {
+        "id": "lesson-divisibility-4-8",
+        "unitId": "divisibility-4-8",
+        "title": "Divisibility by 4 and 8",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-d48-1",
+            "title": "Why two digits, three digits?",
+            "blocks": [
+              {
+                "id": "d48-p1",
+                "type": "paragraph",
+                "text": "100 is divisible by 4 (100 = 4 × 25). So chopping a number into its last two digits and the rest, the 'rest' part is always divisible by 4 — only the last two digits matter."
+              },
+              {
+                "id": "d48-m1",
+                "type": "math",
+                "value": "53{,}216 = 53{,}200 + 16 = 100 \\times 532 + 16"
+              },
+              {
+                "id": "d48-p2",
+                "type": "paragraph",
+                "text": "The same logic climbs a place: 1,000 is divisible by 8 (1,000 = 8 × 125), so divisibility by 8 depends only on the last **three** digits."
+              },
+              {
+                "id": "d48-k1",
+                "type": "key_idea",
+                "text": "By 4: check the last two digits. By 8: check the last three digits."
+              }
+            ]
+          },
+          {
+            "id": "sec-d48-2",
+            "title": "Applying the tests",
+            "blocks": [
+              {
+                "id": "d48-w1",
+                "type": "worked_example",
+                "title": "Worked example: 53,216 and 91,530",
+                "content": [
+                  {
+                    "id": "d48-w1p1",
+                    "type": "paragraph",
+                    "text": "For 53,216: last two digits are 16, and 16 = 4 × 4, so 53,216 is divisible by 4. Last three digits are 216, and 216 = 8 × 27, so it is divisible by 8 too."
+                  },
+                  {
+                    "id": "d48-w1p2",
+                    "type": "paragraph",
+                    "text": "For 91,530: last two digits are 30, and 30 is not a multiple of 4 — so 91,530 fails the test for 4, and therefore for 8 as well (every multiple of 8 is a multiple of 4)."
+                  }
+                ]
+              },
+              {
+                "id": "d48-c1",
+                "type": "callout",
+                "variant": "tip",
+                "title": "Shortcut inside the shortcut",
+                "text": "To check whether the last three digits are divisible by 8, halve them twice. If both halvings give whole numbers, the original is divisible by 8: 216 → 108 → 54, all whole, so 216 passes."
+              },
+              {
+                "id": "d48-q1",
+                "type": "quick_check",
+                "questionId": "qc-d48-1",
+                "question": "Is 12,744 divisible by 8?",
+                "options": [
+                  { "id": "a", "text": "Yes, because 744 = 8 × 93" },
+                  { "id": "b", "text": "No, because 44 is not divisible by 8" },
+                  { "id": "c", "text": "Yes, because 744 is divisible by 4" },
+                  { "id": "d", "text": "It cannot be decided without full division" }
+                ],
+                "correctOptionId": "a",
+                "explanation": "Only the last three digits matter for 8: 744 = 8 × 93, so the whole number is divisible by 8. Note that divisible by 4 does not imply divisible by 8."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "divisibility-6",
+      "conceptId": "divisibility-rules",
+      "title": "Divisibility by 6",
+      "description": "Test divisibility by 6 by combining the tests for 2 and 3.",
+      "order": 3,
+      "estimatedDurationMinutes": 8,
+      "learningObjectives": [
+        "Combine the tests for 2 and 3 to test divisibility by 6",
+        "Explain why both conditions are needed"
+      ],
+      "lessonId": "lesson-divisibility-6",
+      "activityIds": ["mcq-divisibility-6"],
+      "pageReferences": [{ "start": 119, "end": 120 }],
+      "prerequisites": ["divisibility-4-8"],
+      "lesson": {
+        "id": "lesson-divisibility-6",
+        "unitId": "divisibility-6",
+        "title": "Divisibility by 6",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-d6-1",
+            "title": "A two-part test",
+            "blocks": [
+              {
+                "id": "d6-p1",
+                "type": "paragraph",
+                "text": "Since 6 = 2 × 3, a number is divisible by 6 exactly when it is divisible by **both** 2 and 3. Both conditions are needed — 9 passes the test for 3 but fails for 2, and 4 passes for 2 but fails for 3; neither is divisible by 6."
+              },
+              {
+                "id": "d6-m1",
+                "type": "math",
+                "value": "\\text{divisible by } 6 \\iff \\text{even} \\;\\wedge\\; \\text{digit sum divisible by } 3"
+              },
+              {
+                "id": "d6-k1",
+                "type": "key_idea",
+                "text": "For a divisor written as a product of coprime parts (6 = 2 × 3), the number must pass every part's test."
+              }
+            ]
+          },
+          {
+            "id": "sec-d6-2",
+            "title": "Applying the test",
+            "blocks": [
+              {
+                "id": "d6-w1",
+                "type": "worked_example",
+                "title": "Worked example: is 4,326 divisible by 6?",
+                "content": [
+                  {
+                    "id": "d6-w1p1",
+                    "type": "paragraph",
+                    "text": "Step 1 — even? Last digit 6 is even ✓"
+                  },
+                  {
+                    "id": "d6-w1p2",
+                    "type": "paragraph",
+                    "text": "Step 2 — digit sum divisible by 3?"
+                  },
+                  {
+                    "id": "d6-w1m1",
+                    "type": "math",
+                    "value": "4 + 3 + 2 + 6 = 15 = 3 \\times 5 \\;\\checkmark"
+                  },
+                  {
+                    "id": "d6-w1p3",
+                    "type": "paragraph",
+                    "text": "Both parts pass, so 4,326 = 6 × 721 exactly."
+                  }
+                ]
+              },
+              {
+                "id": "d6-q1",
+                "type": "quick_check",
+                "questionId": "qc-d6-1",
+                "question": "Which of these numbers is divisible by 6?",
+                "options": [
+                  { "id": "a", "text": "5,118" },
+                  { "id": "b", "text": "5,119" },
+                  { "id": "c", "text": "5,120" },
+                  { "id": "d", "text": "5,123" }
+                ],
+                "correctOptionId": "a",
+                "explanation": "5,118 is even and its digit sum 5+1+1+8 = 15 is divisible by 3. The others fail one test each: 5,119 is odd, 5,120 has digit sum 8, 5,123 is odd with digit sum 11."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "combining-rules",
+      "conceptId": "divisibility-rules",
+      "title": "Combining the rules",
+      "description": "Test composite divisors like 12, 15 and 24 by chaining simple rules.",
+      "order": 4,
+      "estimatedDurationMinutes": 10,
+      "learningObjectives": [
+        "Split a composite divisor into coprime factors",
+        "Chain rule tests to settle divisibility quickly"
+      ],
+      "lessonId": "lesson-combining-rules",
+      "activityIds": ["mcq-combining-rules"],
+      "pageReferences": [{ "start": 120, "end": 121 }],
+      "prerequisites": ["divisibility-6"],
+      "lesson": {
+        "id": "lesson-combining-rules",
+        "unitId": "combining-rules",
+        "title": "Combining the rules",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-cr-1",
+            "title": "Coprime splitting",
+            "blocks": [
+              {
+                "id": "cr-p1",
+                "type": "paragraph",
+                "text": "Any composite divisor splits into coprime parts, and the number must pass **all** parts. Choosing coprime parts matters: 12 = 4 × 3 works (4 and 3 share no factor), but 12 = 2 × 6 does not — 18 is divisible by both 2 and 6 yet not by 12."
+              },
+              {
+                "id": "cr-t1",
+                "type": "table",
+                "headers": ["Divisor", "Coprime split", "Tests needed"],
+                "rows": [
+                  ["12", "3 × 4", "Digit sum by 3, last two digits by 4"],
+                  ["15", "3 × 5", "Digit sum by 3, last digit 0 or 5"],
+                  ["24", "3 × 8", "Digit sum by 3, last three digits by 8"],
+                  ["18", "2 × 9", "Last digit even, digit sum by 9"]
+                ],
+                "caption": "Chaining tests for composite divisors"
+              },
+              {
+                "id": "cr-k1",
+                "type": "key_idea",
+                "text": "A number is divisible by a composite divisor iff it passes the tests of every coprime factor in the split."
+              }
+            ]
+          },
+          {
+            "id": "sec-cr-2",
+            "title": "A full chain in action",
+            "blocks": [
+              {
+                "id": "cr-w1",
+                "type": "worked_example",
+                "title": "Worked example: is 6,132 divisible by 12?",
+                "content": [
+                  {
+                    "id": "cr-w1p1",
+                    "type": "paragraph",
+                    "text": "Test by 3: digit sum 6 + 1 + 3 + 2 = 12, divisible by 3 ✓"
+                  },
+                  {
+                    "id": "cr-w1p2",
+                    "type": "paragraph",
+                    "text": "Test by 4: last two digits 32 = 4 × 8 ✓"
+                  },
+                  {
+                    "id": "cr-w1m1",
+                    "type": "math",
+                    "value": "6{,}132 = 12 \\times 511 \\;\\checkmark"
+                  }
+                ]
+              },
+              {
+                "id": "cr-q1",
+                "type": "quick_check",
+                "questionId": "qc-cr-1",
+                "question": "Is 2,475 divisible by 15?",
+                "options": [
+                  { "id": "a", "text": "Yes — digit sum 18 passes for 3 and it ends in 5" },
+                  { "id": "b", "text": "No — it fails the test for 3" },
+                  { "id": "c", "text": "No — it fails the test for 5" },
+                  { "id": "d", "text": "It cannot be decided without dividing" }
+                ],
+                "correctOptionId": "a",
+                "explanation": "2,475 = 15 × 165. It ends in 5 (passes for 5) and its digit sum 2+4+7+5 = 18 passes for 3, so it passes for 15."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "learner": { "defaultUserId": "student-demo" },
+  "mastery": {
+    "lessonWeight": 0.4,
+    "quizWeight": 0.6,
+    "passingScore": 70,
+    "canDoThreshold": 70,
+    "conceptMethod": "average",
+    "chapterMethod": "average",
+    "subjectMethod": "average"
+  },
+  "unlocking": {
+    "requirePreviousUnit": true,
+    "requirePreviousConceptExplained": true,
+    "quizRequiresLessonVisited": false
+  },
+  "assessment": {
+    "adaptive": {
+      "enabled": true,
+      "startLevel": 2,
+      "minLevel": 1,
+      "maxLevel": 5
+    },
+    "scoring": {
+      "xpPerCorrect": 10,
+      "confidenceMultipliers": {
+        "guessing": 0.5,
+        "fairly_sure": 0.8,
+        "certain": 1.0
+      }
+    },
+    "reviewScheduling": { "guessingCorrectDays": 3, "wrongAnswerDays": 1 },
+    "revisionAfterFailures": 2,
+    "examMode": { "allowPdf": false }
+  },
+  "features": {
+    "copilot": false,
+    "audio": false,
+    "voice": false,
+    "mindmap": false,
+    "pdfReader": false
+  },
+  "recommendation": { "reviewFirst": true, "resumeFirst": true }
+}

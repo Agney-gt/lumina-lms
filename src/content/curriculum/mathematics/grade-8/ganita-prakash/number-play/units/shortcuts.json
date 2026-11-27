@@ -1,0 +1,403 @@
+{
+  "conceptId": "shortcuts",
+  "units": [
+    {
+      "id": "place-value-rules",
+      "conceptId": "shortcuts",
+      "title": "Place-value rules",
+      "description": "Break numbers into place values to see why digit-based shortcuts work.",
+      "order": 1,
+      "estimatedDurationMinutes": 10,
+      "learningObjectives": [
+        "Expand numbers in place-value form",
+        "Use place-value expansion to justify divisibility shortcuts"
+      ],
+      "lessonId": "lesson-place-value-rules",
+      "activityIds": ["mcq-place-value-rules"],
+      "pageReferences": [{ "start": 123, "end": 125 }],
+      "prerequisites": [],
+      "lesson": {
+        "id": "lesson-place-value-rules",
+        "unitId": "place-value-rules",
+        "title": "Place-value rules",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-pvr-1",
+            "title": "Every number is a sum of places",
+            "blocks": [
+              {
+                "id": "pvr-p1",
+                "type": "paragraph",
+                "text": "Most digit shortcuts look like magic until you expand the number into its **place values**. Each digit secretly carries a multiplier: 1, 10, 100, 1000 and so on."
+              },
+              {
+                "id": "pvr-m1",
+                "type": "math",
+                "value": "7{,}309 = 7 \\times 1000 + 3 \\times 100 + 0 \\times 10 + 9 \\times 1"
+              },
+              {
+                "id": "pvr-p2",
+                "type": "paragraph",
+                "text": "Once a number is written this way, you can ask: what remainder does each place leave when divided by some divisor? Add the remainders and you have the remainder of the whole number."
+              },
+              {
+                "id": "pvr-k1",
+                "type": "key_idea",
+                "text": "Place-value expansion turns 'does d divide this number?' into a small sum of remainders that can be computed digit by digit."
+              }
+            ]
+          },
+          {
+            "id": "sec-pvr-2",
+            "title": "Seeing remainders through place value",
+            "blocks": [
+              {
+                "id": "pvr-w1",
+                "type": "worked_example",
+                "title": "Worked example: 7309 and the divisor 9",
+                "content": [
+                  {
+                    "id": "pvr-w1p1",
+                    "type": "paragraph",
+                    "text": "Divide each place by 9: 1000 leaves remainder 1, 100 leaves remainder 1, 10 leaves remainder 1."
+                  },
+                  {
+                    "id": "pvr-w1m1",
+                    "type": "math",
+                    "value": "7{,}309 = 7(999 + 1) + 3(99 + 1) + 0(9 + 1) + 9"
+                  },
+                  {
+                    "id": "pvr-w1m2",
+                    "type": "math",
+                    "value": "= (999 \\times 7 + 99 \\times 3 + 9 \\times 0) + (7 + 3 + 0 + 9)"
+                  },
+                  {
+                    "id": "pvr-w1p2",
+                    "type": "paragraph",
+                    "text": "The first bracket is a multiple of 9, so the remainder of 7,309 equals the remainder of just 7 + 3 + 0 + 9 = 19 — the **digit sum**. That observation powers the next three units."
+                  }
+                ]
+              },
+              {
+                "id": "pvr-q1",
+                "type": "quick_check",
+                "questionId": "qc-pvr-1",
+                "question": "When 456 is written as 4 × 100 + 5 × 10 + 6, what remainder does each of 100 and 10 leave when divided by 9?",
+                "options": [
+                  { "id": "a", "text": "0 and 0" },
+                  { "id": "b", "text": "1 and 1" },
+                  { "id": "c", "text": "4 and 5" },
+                  { "id": "d", "text": "10 and 1" }
+                ],
+                "correctOptionId": "b",
+                "explanation": "99 and 999 are multiples of 9, so 100 = 99 + 1 and 10 = 9 + 1 each leave remainder 1 — one per place value."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "digit-sum-for-9",
+      "conceptId": "shortcuts",
+      "title": "Digit sum for 9",
+      "description": "Test divisibility by 9 — and find remainders — using the digit sum.",
+      "order": 2,
+      "estimatedDurationMinutes": 12,
+      "learningObjectives": [
+        "Apply the digit-sum test for 9",
+        "Find the remainder on division by 9 from the digit sum"
+      ],
+      "lessonId": "lesson-digit-sum-for-9",
+      "activityIds": ["mcq-digit-sum-for-9", "descriptive-digit-sum-for-9"],
+      "pageReferences": [{ "start": 125, "end": 126 }],
+      "prerequisites": ["place-value-rules"],
+      "lesson": {
+        "id": "lesson-digit-sum-for-9",
+        "unitId": "digit-sum-for-9",
+        "title": "Digit sum for 9",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-ds9-1",
+            "title": "The rule",
+            "blocks": [
+              {
+                "id": "ds9-p1",
+                "type": "paragraph",
+                "text": "Because every place value (10, 100, 1000, …) leaves remainder 1 when divided by 9, each digit contributes exactly its own face value to the remainder. The whole number's remainder is the remainder of its digit sum."
+              },
+              {
+                "id": "ds9-k1",
+                "type": "key_idea",
+                "text": "A number is divisible by 9 exactly when its digit sum is divisible by 9. Otherwise, the remainder of the digit sum (upon division by 9) is the remainder of the number."
+              }
+            ]
+          },
+          {
+            "id": "sec-ds9-2",
+            "title": "The rule in action",
+            "blocks": [
+              {
+                "id": "ds9-w1",
+                "type": "worked_example",
+                "title": "Worked example: 8,271",
+                "content": [
+                  {
+                    "id": "ds9-w1m1",
+                    "type": "math",
+                    "value": "8 + 2 + 7 + 1 = 18 = 9 \\times 2 \\;\\checkmark"
+                  },
+                  {
+                    "id": "ds9-w1p1",
+                    "type": "paragraph",
+                    "text": "The digit sum 18 is divisible by 9, so 8,271 is divisible by 9: 8,271 = 9 × 919."
+                  }
+                ]
+              },
+              {
+                "id": "ds9-w2",
+                "type": "worked_example",
+                "title": "Worked example: finding a remainder",
+                "content": [
+                  {
+                    "id": "ds9-w2p1",
+                    "type": "paragraph",
+                    "text": "What is the remainder when 73,045 is divided by 9?"
+                  },
+                  {
+                    "id": "ds9-w2m1",
+                    "type": "math",
+                    "value": "7 + 3 + 0 + 4 + 5 = 19 = 9 \\times 2 + 1"
+                  },
+                  {
+                    "id": "ds9-w2p2",
+                    "type": "paragraph",
+                    "text": "The digit sum leaves remainder 1, so 73,045 leaves remainder 1 — no long division required."
+                  }
+                ]
+              },
+              {
+                "id": "ds9-c1",
+                "type": "callout",
+                "variant": "tip",
+                "title": "Casting out nines",
+                "text": "While adding the digits you may drop 9s as you meet them — they add zero to the remainder. In 6,948, skip 9 and use 6 + 4 + 8 = 18 → 0. The number is divisible by 9."
+              },
+              {
+                "id": "ds9-q1",
+                "type": "quick_check",
+                "questionId": "qc-ds9-1",
+                "question": "What is the remainder when 54,321 is divided by 9?",
+                "options": [
+                  { "id": "a", "text": "0" },
+                  { "id": "b", "text": "3" },
+                  { "id": "c", "text": "6" },
+                  { "id": "d", "text": "9" }
+                ],
+                "correctOptionId": "c",
+                "explanation": "The digit sum is 5 + 4 + 3 + 2 + 1 = 15, and 15 = 9 × 1 + 6. The digit sum leaves remainder 6, so 54,321 leaves remainder 6 as well."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "digit-sum-for-3",
+      "conceptId": "shortcuts",
+      "title": "Digit sum for 3",
+      "description": "Extend the digit-sum idea to divisibility by 3.",
+      "order": 3,
+      "estimatedDurationMinutes": 10,
+      "learningObjectives": [
+        "Apply the digit-sum test for 3",
+        "Connect the tests for 3 and 9"
+      ],
+      "lessonId": "lesson-digit-sum-for-3",
+      "activityIds": ["mcq-digit-sum-for-3"],
+      "pageReferences": [{ "start": 126, "end": 127 }],
+      "prerequisites": ["digit-sum-for-9"],
+      "lesson": {
+        "id": "lesson-digit-sum-for-3",
+        "unitId": "digit-sum-for-3",
+        "title": "Digit sum for 3",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-ds3-1",
+            "title": "One step further",
+            "blocks": [
+              {
+                "id": "ds3-p1",
+                "type": "paragraph",
+                "text": "The argument for 9 works word-for-word for 3, because 9, 99 and 999 are multiples of 3 as well. Place values leave remainder 1 modulo 3 too, so the digit sum again carries the answer."
+              },
+              {
+                "id": "ds3-k1",
+                "type": "key_idea",
+                "text": "A number is divisible by 3 exactly when its digit sum is divisible by 3. Every multiple of 9 passes the test for 3, but a number can pass for 3 and still fail for 9 (for example 12)."
+              }
+            ]
+          },
+          {
+            "id": "sec-ds3-2",
+            "title": "Comparing the two tests",
+            "blocks": [
+              {
+                "id": "ds3-w1",
+                "type": "worked_example",
+                "title": "Worked example: 5,214",
+                "content": [
+                  {
+                    "id": "ds3-w1m1",
+                    "type": "math",
+                    "value": "5 + 2 + 1 + 4 = 12"
+                  },
+                  {
+                    "id": "ds3-w1p1",
+                    "type": "paragraph",
+                    "text": "12 is divisible by 3 but not by 9. So 5,214 passes for 3 (5,214 = 3 × 1,738) and fails for 9."
+                  }
+                ]
+              },
+              {
+                "id": "ds3-t1",
+                "type": "table",
+                "headers": ["Number", "Digit sum", "By 3?", "By 9?"],
+                "rows": [
+                  ["72", "9", "Yes", "Yes"],
+                  ["75", "12", "Yes", "No"],
+                  ["79", "16", "No", "No"],
+                  ["153", "9", "Yes", "Yes"]
+                ],
+                "caption": "Digit sums decide both tests at once"
+              },
+              {
+                "id": "ds3-q1",
+                "type": "quick_check",
+                "questionId": "qc-ds3-1",
+                "question": "The digit sum of a number is 21. Which statement is true?",
+                "options": [
+                  { "id": "a", "text": "It is divisible by 9 but not by 3" },
+                  { "id": "b", "text": "It is divisible by 3 but not by 9" },
+                  { "id": "c", "text": "It is divisible by both 3 and 9" },
+                  { "id": "d", "text": "It is divisible by neither" }
+                ],
+                "correctOptionId": "b",
+                "explanation": "21 = 3 × 7 is divisible by 3 but 21 is not divisible by 9, so the number passes for 3 and fails for 9."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "alternating-sum-for-11",
+      "conceptId": "shortcuts",
+      "title": "Alternating sum for 11",
+      "description": "Test divisibility by 11 — and read remainders — with the alternating digit sum.",
+      "order": 4,
+      "estimatedDurationMinutes": 12,
+      "learningObjectives": [
+        "Apply the alternating-sum test for 11",
+        "Explain the rule using place values"
+      ],
+      "lessonId": "lesson-alternating-sum-for-11",
+      "activityIds": ["mcq-alternating-sum-for-11"],
+      "pageReferences": [{ "start": 127, "end": 130 }],
+      "prerequisites": ["digit-sum-for-3"],
+      "lesson": {
+        "id": "lesson-alternating-sum-for-11",
+        "unitId": "alternating-sum-for-11",
+        "title": "Alternating sum for 11",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-as11-1",
+            "title": "The rule",
+            "blocks": [
+              {
+                "id": "as11-p1",
+                "type": "paragraph",
+                "text": "For 11, place values alternate their remainders: 10 leaves remainder −1 (that is, 10), 100 leaves remainder 1, 1000 leaves −1 again, and so on. So digits in alternating positions add with opposite signs."
+              },
+              {
+                "id": "as11-m1",
+                "type": "math",
+                "value": "\\text{remainder mod } 11 = (d_0 + d_2 + d_4 + \\dots) - (d_1 + d_3 + \\dots)"
+              },
+              {
+                "id": "as11-k1",
+                "type": "key_idea",
+                "text": "Subtract the sum of digits in odd positions (from the right) from the sum of digits in even positions. If the result is 0 or a multiple of 11, the number is divisible by 11."
+              }
+            ]
+          },
+          {
+            "id": "sec-as11-2",
+            "title": "The rule in action",
+            "blocks": [
+              {
+                "id": "as11-w1",
+                "type": "worked_example",
+                "title": "Worked example: 1,369",
+                "content": [
+                  {
+                    "id": "as11-w1m1",
+                    "type": "math",
+                    "value": "(9 + 3) - (6 + 1) = 12 - 7 = 5"
+                  },
+                  {
+                    "id": "as11-w1p1",
+                    "type": "paragraph",
+                    "text": "The alternating sum is 5, so 1,369 leaves remainder 5 when divided by 11 — and it is not divisible by 11."
+                  }
+                ]
+              },
+              {
+                "id": "as11-w2",
+                "type": "worked_example",
+                "title": "Worked example: 90,827",
+                "content": [
+                  {
+                    "id": "as11-w2m1",
+                    "type": "math",
+                    "value": "(7 + 8 + 9) - (2 + 0) = 24 - 2 = 22 = 11 \\times 2 \\;\\checkmark"
+                  },
+                  {
+                    "id": "as11-w2p2",
+                    "type": "paragraph",
+                    "text": "22 is a multiple of 11, so 90,827 is divisible by 11. Indeed 90,827 = 11 × 8,257."
+                  }
+                ]
+              },
+              {
+                "id": "as11-c1",
+                "type": "callout",
+                "variant": "tip",
+                "title": "Negative or large results",
+                "text": "If the alternating sum is negative, ignore the sign when testing divisibility: −33 still means 'divisible by 11'. For large results, take the alternating sum of the result itself — repeat until small."
+              },
+              {
+                "id": "as11-q1",
+                "type": "quick_check",
+                "questionId": "qc-as11-1",
+                "question": "Is 2,178 divisible by 11?",
+                "options": [
+                  { "id": "a", "text": "Yes — the alternating sum is 0" },
+                  { "id": "b", "text": "Yes — the alternating sum is 11" },
+                  { "id": "c", "text": "No — the alternating sum is 2" },
+                  { "id": "d", "text": "No — the digit sum must be divisible by 11, and it is not" }
+                ],
+                "correctOptionId": "a",
+                "explanation": "From the right the digits are 8, 7, 1, 2: (8 + 1) − (7 + 2) = 0. A zero alternating sum means 2,178 is divisible by 11 — indeed 2,178 = 11 × 198."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

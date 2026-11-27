@@ -1,0 +1,320 @@
+{
+  "conceptId": "remainders",
+  "units": [
+    {
+      "id": "division-with-remainders",
+      "conceptId": "remainders",
+      "title": "Division with remainders",
+      "description": "See division through dot arrays and k-tables, and master the remainder rule.",
+      "order": 1,
+      "estimatedDurationMinutes": 10,
+      "learningObjectives": [
+        "Write the division relation with dividend, divisor, quotient and remainder",
+        "Build a k-table to list multiples of a divisor"
+      ],
+      "lessonId": "lesson-division-with-remainders",
+      "activityIds": ["mcq-division-with-remainders"],
+      "pageReferences": [{ "start": 116, "end": 117 }],
+      "prerequisites": [],
+      "lesson": {
+        "id": "lesson-division-with-remainders",
+        "unitId": "division-with-remainders",
+        "title": "Division with remainders",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-dwr-1",
+            "title": "Sharing with leftovers",
+            "blocks": [
+              {
+                "id": "dwr-p1",
+                "type": "paragraph",
+                "text": "When 17 dots are shared into rows of 5, three full rows appear — and 2 dots are left over. The leftover dots are the **remainder**."
+              },
+              {
+                "id": "dwr-d1",
+                "type": "diagram",
+                "label": "17 dots in rows of 5",
+                "description": "●●●●● ●●●●● ●●●●● ●● — three complete rows of 5 and one partial row of 2, so 17 = 3 × 5 + 2."
+              },
+              {
+                "id": "dwr-m1",
+                "type": "math",
+                "value": "\\text{dividend} = \\text{divisor} \\times \\text{quotient} + \\text{remainder}"
+              },
+              {
+                "id": "dwr-m2",
+                "type": "math",
+                "value": "17 = 5 \\times 3 + 2, \\qquad 0 \\le 2 < 5"
+              },
+              {
+                "id": "dwr-k1",
+                "type": "key_idea",
+                "text": "The remainder is always smaller than the divisor. If the remainder equalled or exceeded the divisor, another full group could still be removed."
+              }
+            ]
+          },
+          {
+            "id": "sec-dwr-2",
+            "title": "The k-table",
+            "blocks": [
+              {
+                "id": "dwr-p2",
+                "type": "paragraph",
+                "text": "A **k-table** lists multiples of the divisor as k × divisor for k = 0, 1, 2, 3, … It turns division into a search: find the largest k whose multiple still fits inside the dividend."
+              },
+              {
+                "id": "dwr-t1",
+                "type": "table",
+                "headers": ["k", "k × 5", "Compare with 42"],
+                "rows": [
+                  ["0", "0", "fits"],
+                  ["1", "5", "fits"],
+                  ["2", "10", "fits"],
+                  ["3", "15", "fits"],
+                  ["4", "20", "fits"],
+                  ["5", "25", "fits"],
+                  ["6", "30", "fits"],
+                  ["7", "35", "fits"],
+                  ["8", "40", "fits — largest"],
+                  ["9", "45", "too big"]
+                ],
+                "caption": "k-table for divisor 5 and dividend 42"
+              },
+              {
+                "id": "dwr-w1",
+                "type": "worked_example",
+                "title": "Worked example: 42 ÷ 5",
+                "content": [
+                  {
+                    "id": "dwr-w1m1",
+                    "type": "math",
+                    "value": "42 = 5 \\times 8 + 2"
+                  },
+                  {
+                    "id": "dwr-w1p1",
+                    "type": "paragraph",
+                    "text": "The largest multiple of 5 that fits in 42 is 40 (k = 8). Two dots remain, so 42 ÷ 5 gives quotient 8 and remainder 2."
+                  }
+                ]
+              },
+              {
+                "id": "dwr-q1",
+                "type": "quick_check",
+                "questionId": "qc-dwr-1",
+                "question": "What are the quotient and remainder for 37 ÷ 6?",
+                "options": [
+                  { "id": "a", "text": "Quotient 6, remainder 1" },
+                  { "id": "b", "text": "Quotient 5, remainder 7" },
+                  { "id": "c", "text": "Quotient 6, remainder 0" },
+                  { "id": "d", "text": "Quotient 7, remainder 1" }
+                ],
+                "correctOptionId": "a",
+                "explanation": "6 × 6 = 36 fits inside 37, leaving 1. A remainder of 7 would be impossible — it is larger than the divisor 6."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "same-remainder-numbers",
+      "conceptId": "remainders",
+      "title": "Numbers with the same remainder",
+      "description": "Describe every number that leaves remainder r when divided by d.",
+      "order": 2,
+      "estimatedDurationMinutes": 10,
+      "learningObjectives": [
+        "Generate all numbers with a given remainder using d × k + r",
+        "Recognise same-remainder families in tables and number lines"
+      ],
+      "lessonId": "lesson-same-remainder-numbers",
+      "activityIds": ["mcq-same-remainder-numbers", "descriptive-same-remainder-numbers"],
+      "pageReferences": [{ "start": 121, "end": 121 }],
+      "prerequisites": ["division-with-remainders"],
+      "lesson": {
+        "id": "lesson-same-remainder-numbers",
+        "unitId": "same-remainder-numbers",
+        "title": "Numbers with the same remainder",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-srn-1",
+            "title": "The remainder family",
+            "blocks": [
+              {
+                "id": "srn-p1",
+                "type": "paragraph",
+                "text": "Every number that leaves remainder 2 when divided by 5 sits exactly 5 steps from the next one. The complete family is described by one formula:"
+              },
+              {
+                "id": "srn-m1",
+                "type": "math",
+                "value": "5k + 2 \\quad \\text{for } k = 0, 1, 2, 3, \\dots"
+              },
+              {
+                "id": "srn-t1",
+                "type": "table",
+                "headers": ["k", "5k + 2", "Check"],
+                "rows": [
+                  ["0", "2", "2 = 5 × 0 + 2"],
+                  ["1", "7", "7 = 5 × 1 + 2"],
+                  ["2", "12", "12 = 5 × 2 + 2"],
+                  ["3", "17", "17 = 5 × 3 + 2"],
+                  ["4", "22", "22 = 5 × 4 + 2"]
+                ],
+                "caption": "Numbers leaving remainder 2 when divided by 5"
+              },
+              {
+                "id": "srn-k1",
+                "type": "key_idea",
+                "text": "Numbers leaving remainder r when divided by d are exactly the numbers d × k + r. Consecutive members of the family differ by d."
+              }
+            ]
+          },
+          {
+            "id": "sec-srn-2",
+            "title": "Using the family",
+            "blocks": [
+              {
+                "id": "srn-w1",
+                "type": "worked_example",
+                "title": "Worked example: is 128 in the remainder-3 family of 7?",
+                "content": [
+                  {
+                    "id": "srn-w1p1",
+                    "type": "paragraph",
+                    "text": "Family members are 7k + 3. Solve 7k + 3 = 128:"
+                  },
+                  {
+                    "id": "srn-w1m1",
+                    "type": "math",
+                    "value": "7k = 125, \\qquad 125 = 7 \\times 17 + 6"
+                  },
+                  {
+                    "id": "srn-w1p2",
+                    "type": "paragraph",
+                    "text": "125 is not a multiple of 7, so no whole k works. Indeed 128 = 7 × 18 + 2 leaves remainder 2, not 3."
+                  }
+                ]
+              },
+              {
+                "id": "srn-c1",
+                "type": "callout",
+                "variant": "tip",
+                "title": "Subtract first, then divide",
+                "text": "To check a remainder: subtract the remainder from the number, then divide by the divisor. If the subtraction gives an exact multiple, the number is in the family."
+              },
+              {
+                "id": "srn-q1",
+                "type": "quick_check",
+                "questionId": "qc-srn-1",
+                "question": "Which number below leaves remainder 4 when divided by 9?",
+                "options": [
+                  { "id": "a", "text": "65" },
+                  { "id": "b", "text": "67" },
+                  { "id": "c", "text": "70" },
+                  { "id": "d", "text": "74" }
+                ],
+                "correctOptionId": "b",
+                "explanation": "67 = 9 × 7 + 4, so it is in the family 9k + 4. The others give remainders 2 (65), 7 (70) and 2 (74)."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "remainder-puzzles",
+      "conceptId": "remainders",
+      "title": "Remainder puzzles",
+      "description": "Translate verbal clues into remainder conditions and hunt down mystery numbers.",
+      "order": 3,
+      "estimatedDurationMinutes": 12,
+      "learningObjectives": [
+        "Convert spoken clues into remainder families",
+        "Intersect families to find mystery numbers"
+      ],
+      "lessonId": "lesson-remainder-puzzles",
+      "activityIds": ["mcq-remainder-puzzles"],
+      "pageReferences": [{ "start": 121, "end": 122 }],
+      "prerequisites": ["same-remainder-numbers"],
+      "lesson": {
+        "id": "lesson-remainder-puzzles",
+        "unitId": "remainder-puzzles",
+        "title": "Remainder puzzles",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-rp-1",
+            "title": "Clues as families",
+            "blocks": [
+              {
+                "id": "rp-p1",
+                "type": "paragraph",
+                "text": "Each clue in a puzzle selects a family of numbers. A mystery number must belong to **every** clue's family, so list the families and look for common members."
+              },
+              {
+                "id": "rp-w1",
+                "type": "worked_example",
+                "title": "Worked example: a two-clue mystery",
+                "content": [
+                  {
+                    "id": "rp-w1p1",
+                    "type": "paragraph",
+                    "text": "*I am less than 30. I leave remainder 1 when divided by 2, and remainder 1 when divided by 3. Who am I?*"
+                  },
+                  {
+                    "id": "rp-w1p2",
+                    "type": "paragraph",
+                    "text": "Remainder 1 when divided by 2 means odd: 1, 3, 5, 7, 9, … Remainder 1 when divided by 3 means numbers of the form 3k + 1: 1, 4, 7, 10, 13, 16, 19, 22, 25, 28."
+                  },
+                  {
+                    "id": "rp-w1m1",
+                    "type": "math",
+                    "value": "\\{1,3,5,7,\\dots\\} \\cap \\{1,4,7,10,\\dots\\} = \\{1, 7, 13, 19, 25\\}"
+                  },
+                  {
+                    "id": "rp-w1p3",
+                    "type": "paragraph",
+                    "text": "All five candidates are under 30. The step between common members is 6, and indeed 1 + 6 = 7, 7 + 6 = 13 — each leaves remainder 1 for both divisors."
+                  }
+                ]
+              },
+              {
+                "id": "rp-k1",
+                "type": "key_idea",
+                "text": "Remainder puzzles become list-and-intersect problems: write each clue as a family, then find members shared by all families."
+              }
+            ]
+          },
+          {
+            "id": "sec-rp-2",
+            "title": "A puzzle with three clues",
+            "blocks": [
+              {
+                "id": "rp-p2",
+                "type": "paragraph",
+                "text": "*I am between 20 and 40. Divided by 2 I leave remainder 0; divided by 3 I leave remainder 2.* Multiples of 2: 20, 22, 24, … Numbers of the form 3k + 2: 20, 23, 26, 29, 32, 35, 38. The common members are 20, 26, 32, 38 — four possible answers, and extra clues would pin one down."
+              },
+              {
+                "id": "rp-q1",
+                "type": "quick_check",
+                "questionId": "qc-rp-1",
+                "question": "A number leaves remainder 2 when divided by 5 and remainder 1 when divided by 4. What is the smallest number above 10 that satisfies both?",
+                "options": [
+                  { "id": "a", "text": "12" },
+                  { "id": "b", "text": "17" },
+                  { "id": "c", "text": "22" },
+                  { "id": "d", "text": "27" }
+                ],
+                "correctOptionId": "b",
+                "explanation": "The 5-family with remainder 2 is 12, 17, 22, 27, … Testing in the 4-family (remainder 1): 12 = 4×3+0 ✗, 17 = 4×4+1 ✓. So 17 is the smallest above 10."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

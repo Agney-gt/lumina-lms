@@ -1,0 +1,248 @@
+{
+  "quizzes": [
+    {
+      "id": "mcq-last-digit-rules",
+      "unitId": "last-digit-rules",
+      "conceptId": "divisibility-rules",
+      "type": "mcq",
+      "title": "MCQ: Last-digit rules",
+      "instructions": "Look only at the last digit.",
+      "questions": [
+        {
+          "id": "q-ldr-1",
+          "type": "mcq",
+          "prompt": "Which number is divisible by 5?",
+          "options": [
+            { "id": "a", "text": "4,502" },
+            { "id": "b", "text": "9,715" },
+            { "id": "c", "text": "6,118" },
+            { "id": "d", "text": "8,004" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "9,715 ends in 5. The others end in 2, 8 and 4.",
+          "difficulty": 1,
+          "marks": 1
+        },
+        {
+          "id": "q-ldr-2",
+          "type": "mcq",
+          "prompt": "A number is divisible by 10. What else must divide it?",
+          "options": [
+            { "id": "a", "text": "Only 5" },
+            { "id": "b", "text": "Only 2" },
+            { "id": "c", "text": "Both 2 and 5" },
+            { "id": "d", "text": "Neither 2 nor 5" }
+          ],
+          "correctOptionId": "c",
+          "explanation": "10 = 2 × 5, so every multiple of 10 is a multiple of both 2 and 5.",
+          "difficulty": 1,
+          "marks": 1
+        },
+        {
+          "id": "q-ldr-3",
+          "type": "mcq",
+          "prompt": "Which digit should replace ★ so that 43★ is divisible by 2 but NOT by 5?",
+          "options": [
+            { "id": "a", "text": "0" },
+            { "id": "b", "text": "5" },
+            { "id": "c", "text": "2" },
+            { "id": "d", "text": "7" }
+          ],
+          "correctOptionId": "c",
+          "explanation": "★ = 2 gives 432: even (ends in 2) and not ending in 0 or 5, so not divisible by 5. ★ = 0 gives 430 (divisible by 5 ✗); ★ = 5 and ★ = 7 give odd numbers (435, 437).",
+          "difficulty": 3,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    },
+    {
+      "id": "mcq-divisibility-4-8",
+      "unitId": "divisibility-4-8",
+      "conceptId": "divisibility-rules",
+      "type": "mcq",
+      "title": "MCQ: Divisibility by 4 and 8",
+      "instructions": "Last two digits for 4, last three for 8.",
+      "questions": [
+        {
+          "id": "q-d48-1",
+          "type": "mcq",
+          "prompt": "Is 56,712 divisible by 4?",
+          "options": [
+            { "id": "a", "text": "Yes — last two digits 12 = 4 × 3" },
+            { "id": "b", "text": "No — digit sum is not divisible by 4" },
+            { "id": "c", "text": "No — the number is odd? It is even, so yes" },
+            { "id": "d", "text": "Yes — it ends in an even digit" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Divisibility by 4 depends on the last two digits: 12 is a multiple of 4. An even last digit only guarantees divisibility by 2.",
+          "difficulty": 1,
+          "marks": 1
+        },
+        {
+          "id": "q-d48-2",
+          "type": "mcq",
+          "prompt": "Which number is divisible by 8?",
+          "options": [
+            { "id": "a", "text": "21,316" },
+            { "id": "b", "text": "45,888" },
+            { "id": "c", "text": "73,124" },
+            { "id": "d", "text": "90,020" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Last three digits 888 = 8 × 111 ✓. The other last-three-digit groups (316, 124, 020) are not multiples of 8.",
+          "difficulty": 2,
+          "marks": 1
+        },
+        {
+          "id": "q-d48-3",
+          "type": "mcq",
+          "prompt": "A number is divisible by 8. Which statement follows?",
+          "options": [
+            { "id": "a", "text": "It is divisible by 16" },
+            { "id": "b", "text": "It is divisible by 4" },
+            { "id": "c", "text": "It is divisible by 12" },
+            { "id": "d", "text": "Its digit sum is divisible by 8" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "8 = 4 × 2, so every multiple of 8 is a multiple of 4. The converse is false, and digit sums relate to 9 and 3, not 8.",
+          "difficulty": 2,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    },
+    {
+      "id": "mcq-divisibility-6",
+      "unitId": "divisibility-6",
+      "conceptId": "divisibility-rules",
+      "type": "mcq",
+      "title": "MCQ: Divisibility by 6",
+      "instructions": "Both conditions — even AND digit sum divisible by 3 — are required.",
+      "questions": [
+        {
+          "id": "q-d6-1",
+          "type": "mcq",
+          "prompt": "Is 2,340 divisible by 6?",
+          "options": [
+            { "id": "a", "text": "Yes — it is even and 2 + 3 + 4 + 0 = 9 is divisible by 3" },
+            { "id": "b", "text": "No — the digit sum is too small" },
+            { "id": "c", "text": "No — it is not even" },
+            { "id": "d", "text": "Only if it is also divisible by 9" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Both tests pass: even last digit, digit sum 9 divisible by 3. Indeed 2,340 = 6 × 390.",
+          "difficulty": 1,
+          "marks": 1
+        },
+        {
+          "id": "q-d6-2",
+          "type": "mcq",
+          "prompt": "The number 3,213 has digit sum 9 but is not divisible by 6. Why?",
+          "options": [
+            { "id": "a", "text": "Its digit sum is wrong" },
+            { "id": "b", "text": "It is odd, so it fails the test for 2" },
+            { "id": "c", "text": "It is divisible by 6 — the premise is false" },
+            { "id": "d", "text": "9 is not divisible by 3" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Passing the digit-sum test for 3 is only half the requirement; 3,213 ends in 3 and is odd, so it is not divisible by 6.",
+          "difficulty": 2,
+          "marks": 1
+        },
+        {
+          "id": "q-d6-3",
+          "type": "mcq",
+          "prompt": "Which of these is divisible by 6?",
+          "options": [
+            { "id": "a", "text": "7,113" },
+            { "id": "b", "text": "7,114" },
+            { "id": "c", "text": "7,115" },
+            { "id": "d", "text": "7,116" }
+          ],
+          "correctOptionId": "d",
+          "explanation": "7,116 is even with digit sum 15 (divisible by 3) ✓. 7,114 has digit sum 13; 7,113 and 7,115 are odd.",
+          "difficulty": 2,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    },
+    {
+      "id": "mcq-combining-rules",
+      "unitId": "combining-rules",
+      "conceptId": "divisibility-rules",
+      "type": "mcq",
+      "title": "MCQ: Combining the rules",
+      "instructions": "Split composite divisors into coprime parts.",
+      "questions": [
+        {
+          "id": "q-cr-1",
+          "type": "mcq",
+          "prompt": "To test divisibility by 15, which two tests should be combined?",
+          "options": [
+            { "id": "a", "text": "By 3 and by 5" },
+            { "id": "b", "text": "By 3 and by 10" },
+            { "id": "c", "text": "By 5 and by 10" },
+            { "id": "d", "text": "By 2 and by 7" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "15 = 3 × 5 with 3 and 5 coprime, so both tests must pass.",
+          "difficulty": 1,
+          "marks": 1
+        },
+        {
+          "id": "q-cr-2",
+          "type": "mcq",
+          "prompt": "Why is the split 12 = 2 × 6 unsafe?",
+          "options": [
+            { "id": "a", "text": "Because 12 is not even" },
+            { "id": "b", "text": "Because 2 and 6 share the factor 2 — 18 passes both tests yet 12 ∤ 18" },
+            { "id": "c", "text": "Because 6 is prime" },
+            { "id": "d", "text": "The split is safe" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Parts must be coprime. 18 is divisible by both 2 and 6 but not by 12, showing the tests are not equivalent.",
+          "difficulty": 3,
+          "marks": 1
+        },
+        {
+          "id": "q-cr-3",
+          "type": "mcq",
+          "prompt": "Is 5,436 divisible by 12?",
+          "options": [
+            { "id": "a", "text": "Yes — digit sum 18 passes for 3 and last two digits 36 pass for 4" },
+            { "id": "b", "text": "No — it fails for 3" },
+            { "id": "c", "text": "No — it fails for 4" },
+            { "id": "d", "text": "No — 12 is too large" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Digit sum 5+4+3+6 = 18 is divisible by 3 ✓ and 36 = 4 × 9 ✓, so 5,436 = 12 × 453.",
+          "difficulty": 2,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    }
+  ]
+}

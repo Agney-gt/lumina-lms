@@ -1,0 +1,273 @@
+{
+  "quizzes": [
+    {
+      "id": "mcq-place-value-rules",
+      "unitId": "place-value-rules",
+      "conceptId": "shortcuts",
+      "type": "mcq",
+      "title": "MCQ: Place-value rules",
+      "instructions": "Expand numbers into place values to reason about remainders.",
+      "questions": [
+        {
+          "id": "q-pvr-1",
+          "type": "mcq",
+          "prompt": "What is the place-value expansion of 2,056?",
+          "options": [
+            { "id": "a", "text": "2 × 1000 + 5 × 100 + 6 × 10" },
+            { "id": "b", "text": "2 × 1000 + 0 × 100 + 5 × 10 + 6 × 1" },
+            { "id": "c", "text": "2 × 100 + 5 × 10 + 6 × 1" },
+            { "id": "d", "text": "2 × 1000 + 56 × 1" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "2,056 = 2 × 1000 + 0 × 100 + 5 × 10 + 6 × 1.",
+          "difficulty": 1,
+          "marks": 1
+        },
+        {
+          "id": "q-pvr-2",
+          "type": "mcq",
+          "prompt": "What remainder does 100 leave when divided by 9?",
+          "options": [
+            { "id": "a", "text": "0" },
+            { "id": "b", "text": "1" },
+            { "id": "c", "text": "10" },
+            { "id": "d", "text": "9" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "100 = 99 + 1 and 99 = 9 × 11, so the remainder is 1. Every power of 10 leaves remainder 1 modulo 9.",
+          "difficulty": 2,
+          "marks": 1
+        },
+        {
+          "id": "q-pvr-3",
+          "type": "mcq",
+          "prompt": "7,309 has digit sum 19. What does that tell us about 7,309 mod 9?",
+          "options": [
+            { "id": "a", "text": "The remainder is 19" },
+            { "id": "b", "text": "The remainder equals that of 19, which is 1" },
+            { "id": "c", "text": "It is divisible by 9" },
+            { "id": "d", "text": "Nothing — digit sums are unrelated to 9" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Place values leave remainder 1 each, so the number's remainder equals that of its digit sum: 19 = 9 × 2 + 1, remainder 1.",
+          "difficulty": 3,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    },
+    {
+      "id": "mcq-digit-sum-for-9",
+      "unitId": "digit-sum-for-9",
+      "conceptId": "shortcuts",
+      "type": "mcq",
+      "title": "MCQ: Digit sum for 9",
+      "instructions": "Add the digits; the digit sum decides the remainder mod 9.",
+      "questions": [
+        {
+          "id": "q-ds9-1",
+          "type": "mcq",
+          "prompt": "Which number is divisible by 9?",
+          "options": [
+            { "id": "a", "text": "3,456" },
+            { "id": "b", "text": "2,345" },
+            { "id": "c", "text": "1,234" },
+            { "id": "d", "text": "9,877" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "3 + 4 + 5 + 6 = 18, a multiple of 9 ✓. Digit sums of the others are 14, 10 and 31.",
+          "difficulty": 1,
+          "marks": 1
+        },
+        {
+          "id": "q-ds9-2",
+          "type": "mcq",
+          "prompt": "What is the remainder when 6,214 is divided by 9?",
+          "options": [
+            { "id": "a", "text": "0" },
+            { "id": "b", "text": "1" },
+            { "id": "c", "text": "4" },
+            { "id": "d", "text": "13" }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Digit sum 6 + 2 + 1 + 4 = 13; 13 = 9 × 1 + 4, so the remainder is 4 (option d shows the digit sum itself, which must still be reduced).",
+          "difficulty": 2,
+          "marks": 1
+        },
+        {
+          "id": "q-ds9-3",
+          "type": "mcq",
+          "prompt": "Which digit makes 8,4★6 divisible by 9?",
+          "options": [
+            { "id": "a", "text": "2" },
+            { "id": "b", "text": "3" },
+            { "id": "c", "text": "6" },
+            { "id": "d", "text": "9" }
+          ],
+          "correctOptionId": "d",
+          "explanation": "8 + 4 + 6 = 18 already; the digit must raise the sum to the next multiple of 9. ★ = 9 gives 27 = 9 × 3 ✓. The other choices give sums 20, 21 and 24 — none a multiple of 9.",
+          "difficulty": 3,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    },
+    {
+      "id": "descriptive-digit-sum-for-9",
+      "unitId": "digit-sum-for-9",
+      "conceptId": "shortcuts",
+      "type": "descriptive",
+      "title": "Descriptive: Why does the digit sum work for 9?",
+      "instructions": "Explain the rule and justify it. Use place values in your argument and include an example.",
+      "questions": [
+        {
+          "id": "q-dds9-1",
+          "type": "descriptive",
+          "prompt": "State the digit-sum rule for divisibility by 9 and explain why it works using place values. Include a worked example.",
+          "marks": 5,
+          "rubricId": "rubric-descriptive-maths",
+          "keyTerms": ["place value", "remainder", "1", "digit sum", "999", "multiple of 9"],
+          "modelAnswer": "A number is divisible by 9 exactly when its digit sum is divisible by 9. This works because every place value — 10, 100, 1000 — leaves remainder 1 when divided by 9 (10 = 9 + 1, 100 = 99 + 1, 1000 = 999 + 1, and 9, 99, 999 are multiples of 9). Expanding the number in place values, the multipliers 9, 99, 999 contribute nothing to the remainder, so only the digits themselves remain. Example: 7,309 has digit sum 19; since 19 leaves remainder 1, the number 7,309 leaves remainder 1 as well."
+        }
+      ],
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      },
+      "rubricId": "rubric-descriptive-maths"
+    },
+    {
+      "id": "mcq-digit-sum-for-3",
+      "unitId": "digit-sum-for-3",
+      "conceptId": "shortcuts",
+      "type": "mcq",
+      "title": "MCQ: Digit sum for 3",
+      "instructions": "The same digit sum serves both 3 and 9.",
+      "questions": [
+        {
+          "id": "q-ds3-1",
+          "type": "mcq",
+          "prompt": "A number has digit sum 12. What can we conclude?",
+          "options": [
+            { "id": "a", "text": "Divisible by 3, not by 9" },
+            { "id": "b", "text": "Divisible by 9, not by 3" },
+            { "id": "c", "text": "Divisible by both" },
+            { "id": "d", "text": "Divisible by neither" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "12 is divisible by 3 but not by 9, so the number passes for 3 and fails for 9.",
+          "difficulty": 2,
+          "marks": 1
+        },
+        {
+          "id": "q-ds3-2",
+          "type": "mcq",
+          "prompt": "Which number is divisible by 3 but not by 9?",
+          "options": [
+            { "id": "a", "text": "4,410" },
+            { "id": "b", "text": "7,776" },
+            { "id": "c", "text": "5,214" },
+            { "id": "d", "text": "8,910" }
+          ],
+          "correctOptionId": "c",
+          "explanation": "5,214 has digit sum 12 — divisible by 3 but not by 9 ✓. The others have digit sums 9, 27 and 18, all multiples of 9.",
+          "difficulty": 3,
+          "marks": 1
+        },
+        {
+          "id": "q-ds3-3",
+          "type": "mcq",
+          "prompt": "Every multiple of 9 also passes which test?",
+          "options": [
+            { "id": "a", "text": "Divisibility by 6" },
+            { "id": "b", "text": "Divisibility by 3" },
+            { "id": "c", "text": "Divisibility by 5" },
+            { "id": "d", "text": "Divisibility by 12" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "9 = 3 × 3, so every multiple of 9 is a multiple of 3. Not every multiple of 9 is even, so 6 and 12 need not divide it.",
+          "difficulty": 1,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    },
+    {
+      "id": "mcq-alternating-sum-for-11",
+      "unitId": "alternating-sum-for-11",
+      "conceptId": "shortcuts",
+      "type": "mcq",
+      "title": "MCQ: Alternating sum for 11",
+      "instructions": "Add digits from the right with alternating signs.",
+      "questions": [
+        {
+          "id": "q-as11-1",
+          "type": "mcq",
+          "prompt": "What is the alternating sum of the digits of 2,979 (from the right, + − + −)?",
+          "options": [
+            { "id": "a", "text": "9 − 7 + 9 − 2 = 9" },
+            { "id": "b", "text": "(9 + 9) − (7 + 2) = 9" },
+            { "id": "c", "text": "2 + 9 + 7 + 9 = 27" },
+            { "id": "d", "text": "(2 + 7) − (9 + 9) = −9" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "From the right, positions with + are 9 and 9, positions with − are 7 and 2: (9 + 9) − (7 + 2) = 18 − 9 = 9. The number leaves remainder 9 mod 11.",
+          "difficulty": 1,
+          "marks": 1
+        },
+        {
+          "id": "q-as11-2",
+          "type": "mcq",
+          "prompt": "Which number is divisible by 11?",
+          "options": [
+            { "id": "a", "text": "4,356" },
+            { "id": "b", "text": "4,357" },
+            { "id": "c", "text": "4,358" },
+            { "id": "d", "text": "4,359" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "4,356: (6 + 3) − (5 + 4) = 9 − 9 = 0 ✓ — divisible by 11. The neighbours change the alternating sum by ±1.",
+          "difficulty": 2,
+          "marks": 1
+        },
+        {
+          "id": "q-as11-3",
+          "type": "mcq",
+          "prompt": "The alternating sum of a number's digits is −22. Is the number divisible by 11?",
+          "options": [
+            { "id": "a", "text": "No — negative results fail the test" },
+            { "id": "b", "text": "Yes — −22 is a multiple of 11" },
+            { "id": "c", "text": "Only if the number is even" },
+            { "id": "d", "text": "The test cannot be applied" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The sign does not matter; divisibility requires the alternating sum to be 0 or a multiple of 11, and −22 = −2 × 11 qualifies.",
+          "difficulty": 2,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    }
+  ]
+}

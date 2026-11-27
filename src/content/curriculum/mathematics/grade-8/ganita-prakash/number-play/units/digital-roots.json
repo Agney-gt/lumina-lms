@@ -1,0 +1,271 @@
+{
+  "conceptId": "digital-roots",
+  "units": [
+    {
+      "id": "computing-digital-roots",
+      "conceptId": "digital-roots",
+      "title": "Computing digital roots",
+      "description": "Repeat the digit sum until one digit remains.",
+      "order": 1,
+      "estimatedDurationMinutes": 8,
+      "learningObjectives": [
+        "Compute the digital root of any number",
+        "Predict digital roots of large numbers quickly"
+      ],
+      "lessonId": "lesson-computing-digital-roots",
+      "activityIds": ["mcq-computing-digital-roots"],
+      "pageReferences": [{ "start": 130, "end": 130 }],
+      "prerequisites": [],
+      "lesson": {
+        "id": "lesson-computing-digital-roots",
+        "unitId": "computing-digital-roots",
+        "title": "Computing digital roots",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-cdr-1",
+            "title": "The one-digit destination",
+            "blocks": [
+              {
+                "id": "cdr-p1",
+                "type": "paragraph",
+                "text": "Take a number, add its digits, then add the digits of the result, and keep going. Every number eventually settles onto a single digit — its **digital root**."
+              },
+              {
+                "id": "cdr-w1",
+                "type": "worked_example",
+                "title": "Worked example: 94,567",
+                "content": [
+                  {
+                    "id": "cdr-w1m1",
+                    "type": "math",
+                    "value": "94{,}567 \\to 9 + 4 + 5 + 6 + 7 = 31 \\to 3 + 1 = 4"
+                  },
+                  {
+                    "id": "cdr-w1p1",
+                    "type": "paragraph",
+                    "text": "The digital root of 94,567 is 4. One more round of digit-adding always finishes the job, since the digit sum of any number under 100 is under 18."
+                  }
+                ]
+              },
+              {
+                "id": "cdr-k1",
+                "type": "key_idea",
+                "text": "The digital root equals the remainder on division by 9 — except that a remainder of 0 shows up as the digit 9. Digital roots are therefore always between 1 and 9."
+              }
+            ]
+          },
+          {
+            "id": "sec-cdr-2",
+            "title": "Shortcut: skip the middle steps",
+            "blocks": [
+              {
+                "id": "cdr-p2",
+                "type": "paragraph",
+                "text": "Since only remainders modulo 9 matter, you can cast out 9s while adding. Better still: the digital root of a sum or product can be found from the digital roots of the parts."
+              },
+              {
+                "id": "cdr-m1",
+                "type": "math",
+                "value": "dr(a + b) = dr\\big(dr(a) + dr(b)\\big), \\qquad dr(a \\times b) = dr\\big(dr(a) \\times dr(b)\\big)"
+              },
+              {
+                "id": "cdr-q1",
+                "type": "quick_check",
+                "questionId": "qc-cdr-1",
+                "question": "What is the digital root of 987,654?",
+                "options": [
+                  { "id": "a", "text": "3" },
+                  { "id": "b", "text": "6" },
+                  { "id": "c", "text": "9" },
+                  { "id": "d", "text": "4" }
+                ],
+                "correctOptionId": "a",
+                "explanation": "9 + 8 + 7 + 6 + 5 + 4 = 39, and 3 + 9 = 12, 1 + 2 = 3. The digital root is 3 — and indeed 987,654 leaves remainder 3 when divided by 9."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "digital-roots-divisibility",
+      "conceptId": "digital-roots",
+      "title": "Digital roots and divisibility",
+      "description": "Use digital roots to test divisibility by 9 and 3 and to verify sums.",
+      "order": 2,
+      "estimatedDurationMinutes": 10,
+      "learningObjectives": [
+        "Detect multiples of 9 by a digital root of 9",
+        "Verify addition using digital roots"
+      ],
+      "lessonId": "lesson-digital-roots-divisibility",
+      "activityIds": ["mcq-digital-roots-divisibility"],
+      "pageReferences": [{ "start": 130, "end": 131 }],
+      "prerequisites": ["computing-digital-roots"],
+      "lesson": {
+        "id": "lesson-digital-roots-divisibility",
+        "unitId": "digital-roots-divisibility",
+        "title": "Digital roots and divisibility",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-drd-1",
+            "title": "Digital roots as checks",
+            "blocks": [
+              {
+                "id": "drd-p1",
+                "type": "paragraph",
+                "text": "A digital root of 9 means the number is a multiple of 9. A digital root of 3 or 6 means divisible by 3 but not by 9. That makes digital roots a fast divisibility and error-checking tool."
+              },
+              {
+                "id": "drd-w1",
+                "type": "worked_example",
+                "title": "Worked example: checking a sum",
+                "content": [
+                  {
+                    "id": "drd-w1p1",
+                    "type": "paragraph",
+                    "text": "Riya added 4,218 + 5,907 and wrote 101,125. Check with digital roots:"
+                  },
+                  {
+                    "id": "drd-w1m1",
+                    "type": "math",
+                    "value": "dr(4{,}218) = 6, \\qquad dr(5{,}907) = 3, \\qquad dr(6 + 3) = 9"
+                  },
+                  {
+                    "id": "drd-w1m2",
+                    "type": "math",
+                    "value": "dr(101{,}125) = 1 + 0 + 1 + 1 + 2 + 5 = 10 \\to 1"
+                  },
+                  {
+                    "id": "drd-w1p2",
+                    "type": "paragraph",
+                    "text": "The answer's digital root should be 9, but it is 1 — Riya made an error. The correct sum is 10,125, whose digital root is 9 ✓."
+                  }
+                ]
+              },
+              {
+                "id": "drd-k1",
+                "type": "key_idea",
+                "text": "dr(a + b) must equal dr(dr(a) + dr(b)). If the check fails, the calculation contains an error."
+              }
+            ]
+          },
+          {
+            "id": "sec-drd-2",
+            "title": "Limits of the check",
+            "blocks": [
+              {
+                "id": "drd-p2",
+                "type": "paragraph",
+                "text": "Digital roots catch most mistakes — digit swaps, wrong digits, dropped digits — but not all. Two errors that shift remainders by equal amounts cancel out, and errors that are multiples of 9 are invisible. A passing check is strong evidence, not proof."
+              },
+              {
+                "id": "drd-q1",
+                "type": "quick_check",
+                "questionId": "qc-drd-1",
+                "question": "A student computes 7,342 + 2,885 = 10,227. Does the digital-root check pass?",
+                "options": [
+                  { "id": "a", "text": "Yes — both sides have digital root 9" },
+                  { "id": "b", "text": "Yes — both sides have digital root 7" },
+                  { "id": "c", "text": "No — the left side gives 9 and the right side gives 3" },
+                  { "id": "d", "text": "No — the check needs products, not sums" }
+                ],
+                "correctOptionId": "a",
+                "explanation": "dr(7,342) = 7+3+4+2 = 16 → 7; dr(2,885) = 2+8+8+5 = 23 → 5; dr(7 + 5) = dr(12) = 3. And dr(10,227) = 1+0+2+2+7 = 12 → 3. Both sides give 3, so the check passes."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "digital-root-puzzles",
+      "conceptId": "digital-roots",
+      "title": "Digital root puzzles",
+      "description": "Find missing digits and mystery multiples using digital roots.",
+      "order": 3,
+      "estimatedDurationMinutes": 10,
+      "learningObjectives": [
+        "Determine missing digits from digital-root constraints",
+        "List numbers with a given digital root"
+      ],
+      "lessonId": "lesson-digital-root-puzzles",
+      "activityIds": ["mcq-digital-root-puzzles"],
+      "pageReferences": [{ "start": 131, "end": 131 }],
+      "prerequisites": ["digital-roots-divisibility"],
+      "lesson": {
+        "id": "lesson-digital-root-puzzles",
+        "unitId": "digital-root-puzzles",
+        "title": "Digital root puzzles",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-drp-1",
+            "title": "Missing-digit problems",
+            "blocks": [
+              {
+                "id": "drp-p1",
+                "type": "paragraph",
+                "text": "If a number must be divisible by 9, its digital root must be 9 — this pins down missing digits beautifully."
+              },
+              {
+                "id": "drp-w1",
+                "type": "worked_example",
+                "title": "Worked example: which digit hides in 34★2?",
+                "content": [
+                  {
+                    "id": "drp-w1p1",
+                    "type": "paragraph",
+                    "text": "34★2 must be divisible by 9, so its digit sum must be a multiple of 9."
+                  },
+                  {
+                    "id": "drp-w1m1",
+                    "type": "math",
+                    "value": "3 + 4 + \\star + 2 = 9 + \\star"
+                  },
+                  {
+                    "id": "drp-w1p2",
+                    "type": "paragraph",
+                    "text": "For 9 + ★ to be a multiple of 9 with ★ a digit 0–9, ★ = 0 or ★ = 9. Both 34,002 and 34,092 are divisible by 9."
+                  }
+                ]
+              },
+              {
+                "id": "drp-k1",
+                "type": "key_idea",
+                "text": "Digital-root constraints often leave a small set of digit candidates — list them, then apply any extra conditions (even, largest, smallest) to finish."
+              }
+            ]
+          },
+          {
+            "id": "sec-drp-2",
+            "title": "Families by digital root",
+            "blocks": [
+              {
+                "id": "drp-p2",
+                "type": "paragraph",
+                "text": "Every digital root selects a family: digital root 7 numbers are 7, 16, 25, 34, 43, … stepping by 9 each time. Puzzle clue *'my digital root is 7 and I am a two-digit even number'* gives 16, 34, 52, 70, 88 — five candidates."
+              },
+              {
+                "id": "drp-q1",
+                "type": "quick_check",
+                "questionId": "qc-drp-1",
+                "question": "A two-digit number has digital root 2 and is odd. Which of these could it be?",
+                "options": [
+                  { "id": "a", "text": "20" },
+                  { "id": "b", "text": "29" },
+                  { "id": "c", "text": "38" },
+                  { "id": "d", "text": "45" }
+                ],
+                "correctOptionId": "b",
+                "explanation": "The digital-root-2 family is 2, 11, 20, 29, 38, 47, … Among the options only 29 is in the family and odd: 20 and 38 are even, and 45 has digital root 9."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

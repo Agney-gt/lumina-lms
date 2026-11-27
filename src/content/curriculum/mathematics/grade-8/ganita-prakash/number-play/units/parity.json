@@ -1,0 +1,424 @@
+{
+  "conceptId": "parity",
+  "units": [
+    {
+      "id": "parity-basics",
+      "conceptId": "parity",
+      "title": "Even and odd numbers",
+      "description": "Recognise even and odd numbers by pairing objects and looking at the last digit.",
+      "order": 1,
+      "estimatedDurationMinutes": 8,
+      "learningObjectives": [
+        "Pair objects to decide whether a count is even or odd",
+        "Use the last digit to classify large numbers"
+      ],
+      "lessonId": "lesson-parity-basics",
+      "activityIds": ["mcq-parity-basics"],
+      "pageReferences": [{ "start": 112, "end": 113 }],
+      "prerequisites": [],
+      "lesson": {
+        "id": "lesson-parity-basics",
+        "unitId": "parity-basics",
+        "title": "Even and odd numbers",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-basics-1",
+            "title": "What parity means",
+            "blocks": [
+              {
+                "id": "pb-p1",
+                "type": "paragraph",
+                "text": "Every whole number is either **even** or **odd**. A number is even if its objects can be arranged in pairs with nothing left over, and odd if one object is always left without a partner."
+              },
+              {
+                "id": "pb-p2",
+                "type": "paragraph",
+                "text": "This idea of pairing is called the **parity** of a number. Parity asks only one question: *does it pair up completely, or is there one left over?*"
+              },
+              {
+                "id": "pb-d1",
+                "type": "diagram",
+                "label": "Pairing 7 dots",
+                "description": "Seven dots arranged as pairs ●● ●● ●● ● — three complete pairs and one unpaired dot, so 7 is odd."
+              },
+              {
+                "id": "pb-k1",
+                "type": "key_idea",
+                "text": "A number is even when it can be written as 2 × n for some whole number n, and odd when it can be written as 2 × n + 1."
+              }
+            ]
+          },
+          {
+            "id": "sec-basics-2",
+            "title": "The last-digit shortcut",
+            "blocks": [
+              {
+                "id": "pb-p3",
+                "type": "paragraph",
+                "text": "You do not need to pair huge numbers one by one. The **last digit** alone decides parity: if it is 0, 2, 4, 6 or 8 the number is even; if it is 1, 3, 5, 7 or 9 the number is odd."
+              },
+              {
+                "id": "pb-w1",
+                "type": "worked_example",
+                "title": "Worked example: classifying large numbers",
+                "content": [
+                  {
+                    "id": "pb-w1m1",
+                    "type": "math",
+                    "value": "45{,}382 \\;\\to\\; \\text{last digit } 2 \\;\\to\\; \\text{even}"
+                  },
+                  {
+                    "id": "pb-w1m2",
+                    "type": "math",
+                    "value": "9{,}991 \\;\\to\\; \\text{last digit } 1 \\;\\to\\; \\text{odd}"
+                  },
+                  {
+                    "id": "pb-w1p1",
+                    "type": "paragraph",
+                    "text": "The last digit works because every place except the units place contributes an even amount — tens are groups of 10, hundreds are groups of 100, and so on."
+                  }
+                ]
+              },
+              {
+                "id": "pb-t1",
+                "type": "table",
+                "headers": ["Number", "Last digit", "Parity"],
+                "rows": [
+                  ["1,204", "4", "Even"],
+                  ["7,375", "5", "Odd"],
+                  ["2,906", "6", "Even"],
+                  ["8,019", "9", "Odd"]
+                ],
+                "caption": "Classifying numbers by their last digit"
+              },
+              {
+                "id": "pb-q1",
+                "type": "quick_check",
+                "questionId": "qc-parity-basics-1",
+                "question": "What is the parity of 63,547?",
+                "options": [
+                  { "id": "a", "text": "Even, because 63,547 ends in 7" },
+                  { "id": "b", "text": "Odd, because the last digit 7 is odd" },
+                  { "id": "c", "text": "Even, because 6 + 3 + 5 + 4 + 7 is even" },
+                  { "id": "d", "text": "It cannot be decided without dividing by 2" }
+                ],
+                "correctOptionId": "b",
+                "explanation": "The last digit 7 is odd, so 63,547 is odd. Digit sums decide divisibility by 3 or 9, not parity."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "sum-difference-parity",
+      "conceptId": "parity",
+      "title": "Parity of sums and differences",
+      "description": "Predict whether a sum or difference is even or odd without doing the calculation.",
+      "order": 2,
+      "estimatedDurationMinutes": 10,
+      "learningObjectives": [
+        "State the parity rules for adding and subtracting even and odd numbers",
+        "Explain the rules using pairing"
+      ],
+      "lessonId": "lesson-sum-difference-parity",
+      "activityIds": ["mcq-sum-difference-parity"],
+      "pageReferences": [{ "start": 113, "end": 114 }],
+      "prerequisites": ["parity-basics"],
+      "lesson": {
+        "id": "lesson-sum-difference-parity",
+        "unitId": "sum-difference-parity",
+        "title": "Parity of sums and differences",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-sdp-1",
+            "title": "The four cases",
+            "blocks": [
+              {
+                "id": "sdp-p1",
+                "type": "paragraph",
+                "text": "When two numbers are added or subtracted, their parities follow fixed patterns. You can read the parity of the answer without computing it."
+              },
+              {
+                "id": "sdp-t1",
+                "type": "table",
+                "headers": ["Operation", "Result parity", "Example"],
+                "rows": [
+                  ["even + even", "even", "4 + 8 = 12"],
+                  ["odd + odd", "even", "5 + 7 = 12"],
+                  ["even + odd", "odd", "4 + 7 = 11"],
+                  ["even − even", "even", "8 − 4 = 4"],
+                  ["odd − odd", "even", "9 − 5 = 4"],
+                  ["even − odd", "odd", "8 − 3 = 5"]
+                ],
+                "caption": "Parity of sums and differences"
+              },
+              {
+                "id": "sdp-p2",
+                "type": "paragraph",
+                "text": "The pattern is easy to see with pairing. Two odd numbers each have one unpaired dot; the two leftovers pair with **each other**, so an odd + odd is even. An even number has no leftover, so even + odd still has one leftover — it stays odd."
+              },
+              {
+                "id": "sdp-k1",
+                "type": "key_idea",
+                "text": "Same parity adds or subtracts to an even number; different parity adds or subtracts to an odd number."
+              }
+            ]
+          },
+          {
+            "id": "sec-sdp-2",
+            "title": "Practice with the rules",
+            "blocks": [
+              {
+                "id": "sdp-w1",
+                "type": "worked_example",
+                "title": "Worked example: parity without computing",
+                "content": [
+                  {
+                    "id": "sdp-w1p1",
+                    "type": "paragraph",
+                    "text": "Is 348 + 1,257 even or odd?"
+                  },
+                  {
+                    "id": "sdp-w1p2",
+                    "type": "paragraph",
+                    "text": "348 ends in 8 (even). 1,257 ends in 7 (odd). Even + odd is **odd**, so the answer must be odd — no addition needed."
+                  },
+                  {
+                    "id": "sdp-w1m1",
+                    "type": "math",
+                    "value": "348 + 1{,}257 = 1{,}605 \\;\\checkmark\\; (\\text{odd})"
+                  }
+                ]
+              },
+              {
+                "id": "sdp-c1",
+                "type": "callout",
+                "variant": "tip",
+                "title": "Sums of many numbers",
+                "text": "For a long sum, count the odd numbers. If the count of odd numbers is even, the total is even; if it is odd, the total is odd. Even numbers never change the parity of a sum."
+              },
+              {
+                "id": "sdp-q1",
+                "type": "quick_check",
+                "questionId": "qc-sdp-1",
+                "question": "Without computing: is 1,111 + 2,222 + 3,333 even or odd?",
+                "options": [
+                  { "id": "a", "text": "Even, because all numbers are even" },
+                  { "id": "b", "text": "Odd, because all three numbers are odd, and odd + odd + odd is odd" },
+                  { "id": "c", "text": "Even, because three odds always make an even" },
+                  { "id": "d", "text": "It depends on the order of addition" }
+                ],
+                "correctOptionId": "b",
+                "explanation": "All three numbers are odd. odd + odd is even, and even + odd is odd — so three odds give an odd total."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "plus-minus-signs",
+      "conceptId": "parity",
+      "title": "Plus-minus signs",
+      "description": "Use parity to settle the classic puzzle of placing + or − signs between 1 and 9.",
+      "order": 3,
+      "estimatedDurationMinutes": 12,
+      "learningObjectives": [
+        "Show that the parity of a signed sum never changes",
+        "Apply the argument to the 1-to-9 sign puzzle"
+      ],
+      "lessonId": "lesson-plus-minus-signs",
+      "activityIds": ["mcq-plus-minus-signs", "descriptive-plus-minus-signs"],
+      "pageReferences": [{ "start": 114, "end": 115 }],
+      "prerequisites": ["sum-difference-parity"],
+      "lesson": {
+        "id": "lesson-plus-minus-signs",
+        "unitId": "plus-minus-signs",
+        "title": "Plus-minus signs",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-pms-1",
+            "title": "The puzzle",
+            "blocks": [
+              {
+                "id": "pms-p1",
+                "type": "paragraph",
+                "text": "Here is a famous puzzle from the chapter: place a **+** or **−** sign in each gap of the expression below. Can any arrangement give an even answer?"
+              },
+              {
+                "id": "pms-m1",
+                "type": "math",
+                "value": "1 \\;\\square\\; 2 \\;\\square\\; 3 \\;\\square\\; 4 \\;\\square\\; 5 \\;\\square\\; 6 \\;\\square\\; 7 \\;\\square\\; 8 \\;\\square\\; 9"
+              },
+              {
+                "id": "pms-p2",
+                "type": "paragraph",
+                "text": "Try a few arrangements first — every answer turns out odd. Parity explains why, instantly."
+              }
+            ]
+          },
+          {
+            "id": "sec-pms-2",
+            "title": "The parity argument",
+            "blocks": [
+              {
+                "id": "pms-w1",
+                "type": "worked_example",
+                "title": "Worked example: why the answer is always odd",
+                "content": [
+                  {
+                    "id": "pms-w1p1",
+                    "type": "paragraph",
+                    "text": "Start with all plus signs. The total is the sum of 1 to 9:"
+                  },
+                  {
+                    "id": "pms-w1m1",
+                    "type": "math",
+                    "value": "1 + 2 + 3 + \\dots + 9 = 45"
+                  },
+                  {
+                    "id": "pms-w1p2",
+                    "type": "paragraph",
+                    "text": "45 is odd. Now flip any single sign from + to −. The total drops by **twice** that number:"
+                  },
+                  {
+                    "id": "pms-w1m2",
+                    "type": "math",
+                    "value": "45 - 2k \\quad \\text{for some whole number } k"
+                  },
+                  {
+                    "id": "pms-w1p3",
+                    "type": "paragraph",
+                    "text": "Subtracting an even number never changes parity. So every arrangement gives an odd total — an even answer is impossible."
+                  }
+                ]
+              },
+              {
+                "id": "pms-k1",
+                "type": "key_idea",
+                "text": "Changing + k to − k changes a total by 2k, an even amount. So sign changes never alter the parity of the result."
+              },
+              {
+                "id": "pms-c1",
+                "type": "callout",
+                "variant": "info",
+                "title": "Try it yourself",
+                "text": "What about the numbers 1 to 8? Their sum is 36, which is even — so arrangements with an even answer (for example, 1 − 2 + 3 + 4 + 5 − 6 + 7 − 8 = 4) do exist. The starting parity decides everything."
+              },
+              {
+                "id": "pms-q1",
+                "type": "quick_check",
+                "questionId": "qc-pms-1",
+                "question": "In the puzzle 1 □ 2 □ … □ 10, which answers are possible?",
+                "options": [
+                  { "id": "a", "text": "Only even answers, because 1 + 2 + … + 10 = 55" },
+                  { "id": "b", "text": "Only odd answers, because the all-plus total 55 is odd" },
+                  { "id": "c", "text": "Both even and odd answers" },
+                  { "id": "d", "text": "Neither — no arrangement gives a whole number" }
+                ],
+                "correctOptionId": "b",
+                "explanation": "The all-plus total is 55, which is odd. Each sign flip subtracts an even number, so every result stays odd."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "parity-games",
+      "conceptId": "parity",
+      "title": "Parity in games and puzzles",
+      "description": "Win number games and crack puzzles by tracking parity of products and sums.",
+      "order": 4,
+      "estimatedDurationMinutes": 10,
+      "learningObjectives": [
+        "Decide the parity of products instantly",
+        "Use parity to predict winners in simple number games"
+      ],
+      "lessonId": "lesson-parity-games",
+      "activityIds": ["mcq-parity-games"],
+      "pageReferences": [{ "start": 115, "end": 115 }],
+      "prerequisites": ["plus-minus-signs"],
+      "lesson": {
+        "id": "lesson-parity-games",
+        "unitId": "parity-games",
+        "title": "Parity in games and puzzles",
+        "contentModes": ["visual", "text"],
+        "sections": [
+          {
+            "id": "sec-pg-1",
+            "title": "Products and parity",
+            "blocks": [
+              {
+                "id": "pg-p1",
+                "type": "paragraph",
+                "text": "Products follow an even stricter rule than sums: **if any factor is even, the product is even**. Only a product of all odd factors is odd."
+              },
+              {
+                "id": "pg-m1",
+                "type": "math",
+                "value": "\\text{even} \\times \\text{anything} = \\text{even}, \\qquad \\text{odd} \\times \\text{odd} = \\text{odd}"
+              },
+              {
+                "id": "pg-w1",
+                "type": "worked_example",
+                "title": "Worked example: is 27 × 34 × 51 even?",
+                "content": [
+                  {
+                    "id": "pg-w1p1",
+                    "type": "paragraph",
+                    "text": "Scan the factors: 27 is odd, 34 is even, 51 is odd. One even factor is enough."
+                  },
+                  {
+                    "id": "pg-w1m1",
+                    "type": "math",
+                    "value": "27 \\times 34 \\times 51 = 46{,}818 \\quad (\\text{even})"
+                  }
+                ]
+              },
+              {
+                "id": "pg-k1",
+                "type": "key_idea",
+                "text": "Sums: parity depends on how many odd terms there are. Products: one even factor makes the whole product even."
+              }
+            ]
+          },
+          {
+            "id": "sec-pg-2",
+            "title": "A parity game",
+            "blocks": [
+              {
+                "id": "pg-p2",
+                "type": "paragraph",
+                "text": "Two players take turns choosing a number from 1 to 9, without repeats. The first player whose running total lands on an **even** number wins. Does the first player have a winning strategy?"
+              },
+              {
+                "id": "pg-p3",
+                "type": "paragraph",
+                "text": "Parity answers it: the first player picks an odd number, making the total odd. Whatever even the second player adds, the total stays odd. If the second player adds an odd number, the total becomes even — and the **second** player wins. So the first player should always respond to keep control: pick numbers so that after your move the total stays the parity you want."
+              },
+              {
+                "id": "pg-q1",
+                "type": "quick_check",
+                "questionId": "qc-pg-1",
+                "question": "Is the product 1 × 3 × 5 × 7 × 9 × 2 even or odd?",
+                "options": [
+                  { "id": "a", "text": "Odd, because most factors are odd" },
+                  { "id": "b", "text": "Even, because the factor 2 is even" },
+                  { "id": "c", "text": "Odd, because all factors are less than 10" },
+                  { "id": "d", "text": "It depends on the order of multiplication" }
+                ],
+                "correctOptionId": "b",
+                "explanation": "A single even factor (2) makes the entire product even. Order of multiplication never affects parity."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

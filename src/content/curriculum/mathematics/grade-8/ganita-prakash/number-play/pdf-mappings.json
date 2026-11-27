@@ -1,0 +1,67 @@
+{
+  "pdfId": "number-play-pdf",
+  "chapterId": "number-play",
+  "sourceType": "local",
+  "assetPath": "/pdfs/ganita-prakash-grade-8-chapter-5-number-play.pdf",
+  "totalPages": 27,
+  "pageMappings": [
+    {
+      "pages": { "start": 5, "end": 8 },
+      "label": "Parity",
+      "unitIds": [
+        "parity-basics",
+        "sum-difference-parity",
+        "plus-minus-signs",
+        "parity-games"
+      ]
+    },
+    {
+      "pages": { "start": 9, "end": 10 },
+      "label": "Remainders",
+      "unitIds": [
+        "division-with-remainders",
+        "same-remainder-numbers",
+        "remainder-puzzles"
+      ]
+    },
+    {
+      "pages": { "start": 10, "end": 14 },
+      "label": "Divisibility rules",
+      "unitIds": [
+        "last-digit-rules",
+        "divisibility-4-8",
+        "divisibility-6",
+        "combining-rules"
+      ]
+    },
+    {
+      "pages": { "start": 16, "end": 23 },
+      "label": "Shortcuts",
+      "unitIds": [
+        "place-value-rules",
+        "digit-sum-for-9",
+        "digit-sum-for-3",
+        "alternating-sum-for-11"
+      ]
+    },
+    {
+      "pages": { "start": 23, "end": 24 },
+      "label": "Digital roots",
+      "unitIds": [
+        "computing-digital-roots",
+        "digital-roots-divisibility",
+        "digital-root-puzzles"
+      ]
+    },
+    {
+      "pages": { "start": 24, "end": 26 },
+      "label": "Cryptarithms",
+      "unitIds": [
+        "cryptarithm-basics",
+        "cryptarithm-strategies",
+        "cryptarithm-classics"
+      ]
+    }
+  ],
+  "version": "1.0.0"
+}

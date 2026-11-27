@@ -1,0 +1,187 @@
+{
+  "quizzes": [
+    {
+      "id": "mcq-computing-digital-roots",
+      "unitId": "computing-digital-roots",
+      "conceptId": "digital-roots",
+      "type": "mcq",
+      "title": "MCQ: Computing digital roots",
+      "instructions": "Add digits repeatedly until one digit remains.",
+      "questions": [
+        {
+          "id": "q-cdr-1",
+          "type": "mcq",
+          "prompt": "What is the digital root of 75?",
+          "options": [
+            { "id": "a", "text": "3" },
+            { "id": "b", "text": "7" },
+            { "id": "c", "text": "12" },
+            { "id": "d", "text": "5" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "7 + 5 = 12, then 1 + 2 = 3. The process stops only at a single digit.",
+          "difficulty": 1,
+          "marks": 1
+        },
+        {
+          "id": "q-cdr-2",
+          "type": "mcq",
+          "prompt": "Which digital root is impossible?",
+          "options": [
+            { "id": "a", "text": "1" },
+            { "id": "b", "text": "0" },
+            { "id": "c", "text": "5" },
+            { "id": "d", "text": "9" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A remainder of 0 modulo 9 shows up as the digit 9, so digital roots always land between 1 and 9 — never 0 (for positive numbers).",
+          "difficulty": 2,
+          "marks": 1
+        },
+        {
+          "id": "q-cdr-3",
+          "type": "mcq",
+          "prompt": "The digital root of a number is 9. What do we know about it?",
+          "options": [
+            { "id": "a", "text": "It is odd" },
+            { "id": "b", "text": "It is divisible by 9" },
+            { "id": "c", "text": "It is divisible by 5" },
+            { "id": "d", "text": "It is a perfect square" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A digital root of 9 means the remainder mod 9 is 0 — the number is a multiple of 9.",
+          "difficulty": 2,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    },
+    {
+      "id": "mcq-digital-roots-divisibility",
+      "unitId": "digital-roots-divisibility",
+      "conceptId": "digital-roots",
+      "type": "mcq",
+      "title": "MCQ: Digital roots and divisibility",
+      "instructions": "Use dr(a + b) = dr(dr(a) + dr(b)) as your checking tool.",
+      "questions": [
+        {
+          "id": "q-drd-1",
+          "type": "mcq",
+          "prompt": "dr(2,340) = 9 and dr(1,456) = 7. What should dr of their sum be?",
+          "options": [
+            { "id": "a", "text": "dr(16) = 7" },
+            { "id": "b", "text": "dr(9 + 7) = 7" },
+            { "id": "c", "text": "dr(9 + 7) = 16" },
+            { "id": "d", "text": "dr(9 × 7) = 9" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Add the digital roots and reduce again: dr(9 + 7) = dr(16) = 1 + 6 = 7.",
+          "difficulty": 2,
+          "marks": 1
+        },
+        {
+          "id": "q-drd-2",
+          "type": "mcq",
+          "prompt": "A student writes 3,412 + 2,508 = 5,820. The digital-root check shows:",
+          "options": [
+            { "id": "a", "text": "It passes — both sides reduce to 5" },
+            { "id": "b", "text": "It passes — both sides reduce to 0" },
+            { "id": "c", "text": "It fails — the sum side reduces to 6, the parts side to 5" },
+            { "id": "d", "text": "Digital roots cannot check addition" }
+          ],
+          "correctOptionId": "c",
+          "explanation": "dr(3,412) = 10 → 1; dr(2,508) = 15 → 6; dr(1 + 6) = 7. But dr(5,820) = 15 → 6. Mismatch — the stated sum is wrong (3,412 + 2,508 = 5,920).",
+          "difficulty": 3,
+          "marks": 1
+        },
+        {
+          "id": "q-drd-3",
+          "type": "mcq",
+          "prompt": "A wrong answer can still pass the digital-root check when the error is:",
+          "options": [
+            { "id": "a", "text": "A multiple of 9" },
+            { "id": "b", "text": "A multiple of 10" },
+            { "id": "c", "text": "An even number" },
+            { "id": "d", "text": "Any large number" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Errors of exactly 9, 18, 27, … do not change the remainder mod 9, so the check cannot detect them.",
+          "difficulty": 3,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    },
+    {
+      "id": "mcq-digital-root-puzzles",
+      "unitId": "digital-root-puzzles",
+      "conceptId": "digital-roots",
+      "type": "mcq",
+      "title": "MCQ: Digital root puzzles",
+      "instructions": "Set up the digit-sum condition, then solve for the missing digit.",
+      "questions": [
+        {
+          "id": "q-drp-1",
+          "type": "mcq",
+          "prompt": "2,84★ must be divisible by 9. What is ★?",
+          "options": [
+            { "id": "a", "text": "2" },
+            { "id": "b", "text": "4" },
+            { "id": "c", "text": "6" },
+            { "id": "d", "text": "8" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "2 + 8 + 4 = 14, and the next multiple of 9 is 18, so ★ = 4. The other choices give digit sums 16, 20 and 22 — none divisible by 9.",
+          "difficulty": 2,
+          "marks": 1
+        },
+        {
+          "id": "q-drp-2",
+          "type": "mcq",
+          "prompt": "Which number has digital root 1?",
+          "options": [
+            { "id": "a", "text": "154" },
+            { "id": "b", "text": "263" },
+            { "id": "c", "text": "348" },
+            { "id": "d", "text": "471" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "154: 1 + 5 + 4 = 10 → 1 ✓. The others reduce to 2 (263), 6 (348) and 3 (471).",
+          "difficulty": 2,
+          "marks": 1
+        },
+        {
+          "id": "q-drp-3",
+          "type": "mcq",
+          "prompt": "A number's digits add to 33. What is its digital root?",
+          "options": [
+            { "id": "a", "text": "33" },
+            { "id": "b", "text": "6" },
+            { "id": "c", "text": "9" },
+            { "id": "d", "text": "3" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "3 + 3 = 6, so the digital root is 6 — and the number leaves remainder 6 modulo 9.",
+          "difficulty": 1,
+          "marks": 1
+        }
+      ],
+      "difficulty": { "enabled": true, "startLevel": 2, "minLevel": 1, "maxLevel": 5 },
+      "passingThreshold": 70,
+      "scoringPolicy": {
+        "xpPerCorrect": 10,
+        "confidenceMultipliers": { "guessing": 0.5, "fairly_sure": 0.8, "certain": 1.0 }
+      }
+    }
+  ]
+}
